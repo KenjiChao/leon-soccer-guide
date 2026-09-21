@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陪 Leon 踢球 — 6 歲以下足球遊戲指南</title>
+<style>
+  :root{
+    --paper:#F4EFE4;        /* 米白 */
+    --ink:#2B2621;          /* 深墨 */
+    --ink-soft:#5A5147;
+    --amber:#E0A144;        /* 威士忌琥珀 主色 */
+    --amber-deep:#B4761E;   /* 壓深金 */
+    --leather:#7A3B2E;      /* 皮件棕 副色 */
+    --line:#D8CDB8;
+    --card:#FBF8F1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif;
+    background:var(--paper); color:var(--ink);
+    line-height:1.75; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:0 20px}
+
+  /* ---- HERO ---- */
+  header{
+    background:var(--ink); color:var(--paper);
+    padding:56px 20px 48px; position:relative; overflow:hidden;
+    border-bottom:6px solid var(--amber);
+  }
+  header .wrap{position:relative; z-index:2}
+  .kicker{
+    font-size:13px; letter-spacing:.22em; color:var(--amber);
+    font-weight:700; text-transform:uppercase; margin-bottom:14px;
+  }
+  header h1{font-size:clamp(30px,7vw,46px); line-height:1.15; font-weight:800; letter-spacing:-.01em}
+  header h1 em{color:var(--amber); font-style:normal}
+  header p.sub{margin-top:16px; font-size:16px; color:#D9CFBE; max-width:52ch}
+  .ball{
+    position:absolute; right:-40px; top:-30px; width:220px; height:220px;
+    border-radius:50%; background:var(--amber-deep); opacity:.12; z-index:1;
+  }
+
+  /* ---- SECTION SHELL ---- */
+  section{padding:44px 0}
+  section + section{border-top:1px solid var(--line)}
+  .sec-label{
+    display:inline-block; font-size:12px; letter-spacing:.18em; font-weight:700;
+    color:var(--leather); text-transform:uppercase; margin-bottom:8px;
+  }
+  h2{font-size:clamp(22px,5vw,30px); font-weight:800; letter-spacing:-.01em; line-height:1.25}
+  h2 .num{color:var(--amber-deep); margin-right:10px}
+  section > .wrap > p.lead{margin-top:14px; font-size:17px; color:var(--ink-soft)}
+
+  /* ---- BIG IDEA CARDS ---- */
+  .principles{display:grid; gap:16px; margin-top:26px}
+  .pcard{
+    background:var(--card); border-left:5px solid var(--amber);
+    border-radius:4px; padding:20px 22px; box-shadow:0 1px 0 var(--line);
+  }
+  .pcard h3{font-size:18px; font-weight:800; margin-bottom:6px}
+  .pcard h3 span{color:var(--amber-deep)}
+  .pcard p{font-size:15.5px; color:var(--ink-soft)}
+
+  /* ---- NG BLOCK ---- */
+  .ng{background:var(--leather); color:#F6ECE2; border-radius:6px; padding:24px 22px; margin-top:26px}
+  .ng h3{color:#fff; font-size:18px; margin-bottom:14px; font-weight:800}
+  .ng ul{list-style:none; display:grid; gap:12px}
+  .ng li{padding-left:30px; position:relative; font-size:15.5px}
+  .ng li::before{content:"✕"; position:absolute; left:0; top:0; color:var(--amber); font-weight:800}
+  .ng li b{color:#fff}
+
+  /* ---- TABLE-LIKE: attention span ---- */
+  .attn{display:flex; gap:10px; margin-top:22px; flex-wrap:wrap}
+  .attn div{
+    flex:1; min-width:120px; background:var(--card); border:1px solid var(--line);
+    border-radius:6px; padding:16px; text-align:center;
+  }
+  .attn .age{font-size:26px; font-weight:800; color:var(--amber-deep)}
+  .attn .t{font-size:13px; color:var(--ink-soft); margin-top:4px}
+
+  /* ---- GAME CARDS ---- */
+  .games{display:grid; gap:18px; margin-top:26px}
+  .game{
+    background:var(--card); border:1px solid var(--line); border-radius:8px;
+    padding:20px 22px; position:relative;
+  }
+  .game .tag{
+    display:inline-block; font-size:11px; font-weight:700; letter-spacing:.08em;
+    color:#fff; background:var(--amber-deep); padding:3px 10px; border-radius:20px; margin-bottom:10px;
+  }
+  .game .tag.b{background:var(--leather)}
+  .game h3{font-size:19px; font-weight:800; margin-bottom:6px}
+  .game .jp{font-size:12.5px; color:#A89B84; margin-bottom:10px; letter-spacing:.02em}
+  .game p{font-size:15px; color:var(--ink-soft); margin-bottom:10px}
+  .game .secret{
+    font-size:13.5px; background:var(--paper); border-left:3px solid var(--amber);
+    padding:8px 12px; border-radius:0 4px 4px 0; color:var(--ink);
+  }
+  .game .secret b{color:var(--amber-deep)}
+
+  /* ---- ROUTINE / timeline ---- */
+  .routine{margin-top:26px; display:grid; gap:0}
+  .step{
+    display:grid; grid-template-columns:64px 1fr; gap:16px; padding:16px 0;
+    border-bottom:1px dashed var(--line); align-items:start;
+  }
+  .step:last-child{border-bottom:none}
+  .step .min{
+    font-size:15px; font-weight:800; color:#fff; background:var(--amber);
+    border-radius:6px; padding:8px 0; text-align:center; line-height:1.2;
+  }
+  .step .min small{display:block; font-size:10px; font-weight:600; opacity:.9}
+  .step .body h4{font-size:16px; font-weight:800; margin-bottom:3px}
+  .step .body p{font-size:14.5px; color:var(--ink-soft)}
+
+  /* ---- QUOTE ---- */
+  .quote{
+    background:var(--ink); color:var(--paper); border-radius:8px;
+    padding:30px 26px; margin-top:30px; border-top:5px solid var(--amber);
+  }
+  .quote p{font-size:18px; line-height:1.6; font-weight:600}
+  .quote p em{color:var(--amber); font-style:normal}
+  .quote cite{display:block; margin-top:12px; font-size:13px; color:#B9AE9C; font-style:normal}
+
+  /* ---- SOURCES ---- */
+  .src{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:20px 22px; margin-top:20px}
+  .src h3{font-size:15px; margin-bottom:12px; color:var(--ink)}
+  .src ul{list-style:none; display:grid; gap:9px}
+  .src li{font-size:14px}
+  .src a{color:var(--leather); text-decoration:none; border-bottom:1px solid var(--line); word-break:break-all}
+  .src a:hover{color:var(--amber-deep); border-color:var(--amber-deep)}
+  .src .who{color:var(--ink-soft); display:block; font-size:12.5px; margin-top:2px}
+
+  footer{padding:34px 20px 46px; text-align:center; color:var(--ink-soft); font-size:13px}
+  footer b{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="ball"></div>
+  <div class="wrap">
+    <div class="kicker">6 歲以下 · 親子足球</div>
+    <h1>陪 Leon 踢球<br>不是<em>教</em>，是<em>設局讓他著迷</em></h1>
+    <p class="sub">整理自日本足協（JFA）與日本現役青訓教練的核心觀念。這年紀不練技術、不排隊、不解釋——你只要當那個「最認真跟他玩」的大人。</p>
+  </div>
+</header>
+
+<section id="why">
+  <div class="wrap">
+    <span class="sec-label">核心觀念</span>
+    <h2><span class="num">01</span>為什麼「不要教」反而對</h2>
+    <p class="lead">日本足協 U6 手冊寫得很直接：這階段的目標<b>不是培養足球選手，而是培養活力充沛的孩子</b>。3–6 歲孩子每天在瘋狂學「怎麼動身體」——跑、停、跨、蹲。他們需要的不是正確姿勢，是「各種動作、大量地、開心地」做。</p>
+
+    <div class="principles">
+      <div class="pcard">
+        <h3><span>①</span> 不要排隊</h3>
+        <p>一人一顆球、全員同時動。幼兒的專注力是在「等待」裡耗光的。15 個孩子排一排輪流射門，射到第 3 個，後面的已經在玩沙了。</p>
+      </div>
+      <div class="pcard">
+        <h3><span>②</span> 不要用嘴解釋</h3>
+        <p>「用腳內側把球推出去」對 5 歲沒有意義。大人先做給他看，一句「來，模仿我！」就開始。你動作愈奇怪，他愈想跟。</p>
+      </div>
+      <div class="pcard">
+        <h3><span>③</span> 膩了就馬上停</h3>
+        <p>「你剛剛做到了嗎？再一次」會把遊戲變成考試。膩了就換、或直接收。他笑著＝這次就成功了，不用看他做得好不好。</p>
+      </div>
+    </div>
+
+    <div class="ng">
+      <h3>爸爸最容易踩的三個雷</h3>
+      <ul>
+        <li><b>排隊、等順序</b> — 這些在小學以後才是對的，對幼兒全都太早。</li>
+        <li><b>用語言講解</b> — 換成「先做給他看」。</li>
+        <li><b>確認他學會沒</b> — 換成：你自己誇張地裝懊惱「啊我輸了！」</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="span">
+  <div class="wrap">
+    <span class="sec-label">設計原則</span>
+    <h2><span class="num">02</span>用「時間」設計，而不是用「菜單」</h2>
+    <p class="lead">幼兒的專注力大約是 <b>年齡 × 2–3 分鐘</b>。所以「30 分鐘的訓練菜單」這個想法本身就不適合他——適合的是<b>「5 分鐘的遊戲，只要他喊『再一次！』就重複」</b>。</p>
+
+    <div class="attn">
+      <div><div class="age">4 歲</div><div class="t">撐 10 分鐘就很棒</div></div>
+      <div><div class="age">5 歲</div><div class="t">單一遊戲 ≤ 5 分鐘</div></div>
+      <div><div class="age">總長</div><div class="t">整場控制在 ~20–30 分</div></div>
+    </div>
+
+    <div class="principles" style="margin-top:24px">
+      <div class="pcard">
+        <h3><span>·</span> 一次只換一個變化</h3>
+        <p>同一個追逐遊戲，今天加條尾巴、明天換成鬼慢動作——結構不變、只換佐料。不用每次想全新的花樣。</p>
+      </div>
+      <div class="pcard">
+        <h3><span>·</span> 用「意象」代替術語</h3>
+        <p>日本教練山本雅史的招牌：「像新幹線一樣快」「像忍者一樣安靜」。孩子秒懂，還會自己加戲。</p>
+      </div>
+      <div class="pcard">
+        <h3><span>·</span> 用「運球」當主軸</h3>
+        <p>幼兒到低年級是控球突飛猛進的黃金期。核心不是「踢」而是「運（運ぶ）」——把球帶著走、能停得住。傳球這年紀多數孩子沒興趣，別勉強。</p>
+      </div>
+      <div class="pcard">
+        <h3><span>·</span> 一定要有射門</h3>
+        <p>孩子最愛「踢了就有好事發生」。用寶特瓶、樹、遊具當球門都行；距離從 2–3 步開始，打不到的距離是大忌。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="games">
+  <div class="wrap">
+    <span class="sec-label">實作遊戲庫</span>
+    <h2><span class="num">03</span>直接照做的 9 個遊戲</h2>
+    <p class="lead">依「和球做朋友 → 追逐躲藏 → 射門快感」排列。每個遊戲下面那條琥珀色小字，是<b>你偷偷知道就好、別跟 Leon 說</b>的訓練目的。</p>
+
+    <div class="games">
+
+      <div class="game">
+        <span class="tag">和球做朋友</span>
+        <h3>1 · 撿球大賽</h3>
+        <div class="jp">ボールあつめ</div>
+        <p>撒 5–6 顆球，喊「預備—跑！」比誰先把球抱進籃子（野餐墊也行）。可以用手抱著搬，規則愈鬆愈好。</p>
+        <div class="secret"><b>目的：</b>把「球＝好玩」刻進他腦裡。這階段別堅持用腳。</div>
+      </div>
+
+      <div class="game">
+        <span class="tag">和球做朋友</span>
+        <h3>2 · 滾滾接接</h3>
+        <div class="jp">ころころキャッチ</div>
+        <p>父子坐著面對面滾球。熟了就變聲音變球速：「用熊熊的聲音滾囉～」「這球很快喔！」怕飛球的孩子，滾地球都能笑著接。</p>
+        <div class="secret"><b>目的：</b>建立對球移動的預判，零恐懼。</div>
+      </div>
+
+      <div class="game">
+        <span class="tag">和球做朋友</span>
+        <h3>3 · 幫球洗澎澎</h3>
+        <div class="jp">ボールおふろ</div>
+        <p>用肚子、膝蓋、腳底把球滾一滾。「你能用腳底摸摸球嗎？」幼兒會很得意地做給你看。</p>
+        <div class="secret"><b>目的：</b>這其實就是「球感（ball touch）」訓練本體。</div>
+      </div>
+
+      <div class="game">
+        <span class="tag b">追逐 · 躲藏</span>
+        <h3>4 · 抓尾巴 + 球</h3>
+        <div class="jp">しっぽ取り＋ボール</div>
+        <p>褲子夾條毛巾當尾巴玩抓尾巴，孩子邊帶著球邊跑（一開始用手拿著跑也行）。</p>
+        <div class="secret"><b>目的：</b>「帶著球、同時看周圍」——足球的核心動作，被藏進遊戲裡。</div>
+      </div>
+
+      <div class="game">
+        <span class="tag b">追逐 · 躲藏</span>
+        <h3>5 · 一二三木頭人 · 足球版</h3>
+        <div class="jp">だるまさんがころんだ</div>
+        <p>你當鬼，孩子帶球靠近；你一回頭，他要踩住球「定格」。定格的姿勢愈怪愈嗨。</p>
+        <div class="secret"><b>目的：</b>「運球 + 立刻停住」，但完全不像在練停球。</div>
+      </div>
+
+      <div class="game">
+        <span class="tag b">追逐 · 躲藏</span>
+        <h3>6 · 大野狼來了</h3>
+        <div class="jp">おおかみが来たぞ</div>
+        <p>你當狼。「趁大野狼睡覺時」孩子把球帶著前進，一喊「大野狼來了—！」就抱球逃回「家」。</p>
+        <div class="secret"><b>目的：</b>刺激感是幼兒的甜蜜點，會一直喊「再一次」。</div>
+      </div>
+
+      <div class="game">
+        <span class="tag b">追逐 · 躲藏</span>
+        <h3>7 · 模仿爸爸運球</h3>
+        <div class="jp">親のまねっこドリブル</div>
+        <p>你不帶球走前面，走 Z 字、跳一下、忽然停；孩子帶球跟在後面。一句「你跟得上嗎～？」就開始。</p>
+        <div class="secret"><b>目的：</b>變向、急停、抬頭看——你動作愈怪，他吃得愈開。</div>
+      </div>
+
+      <div class="game">
+        <span class="tag" style="background:var(--amber)">射門 · 快感</span>
+        <h3>8 · 什麼都能打的標靶</h3>
+        <div class="jp">なんでもまとあて</div>
+        <p>排一排寶特瓶或空箱，踢球打倒。倒的瞬間你配音效「碰—！」他能玩到天荒地老。距離從 2–3 步開始。</p>
+        <div class="secret"><b>目的：</b>射門的準度與力道，打不到的距離是大忌。</div>
+      </div>
+
+      <div class="game">
+        <span class="tag" style="background:var(--amber)">射門 · 快感</span>
+        <h3>9 · 帶球射門</h3>
+        <div class="jp">ドリブルからのシュート</div>
+        <p>帶球走幾步後對著球門（樹、遊具、小球門都行）射。每次練習<b>務必用它收尾</b>——孩子會自然學到「射門前該把球放哪」。</p>
+        <div class="secret"><b>目的：</b>把運球和射門串起來，而且孩子最愛，一定嗨。</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="routine">
+  <div class="wrap">
+    <span class="sec-label">給你的固定流程</span>
+    <h2><span class="num">04</span>到公園照著跑的 20 分鐘</h2>
+    <p class="lead">不用背菜單。記住這條時間軸就好，每格從上面遊戲庫挑一個換著玩。他喊「再一次」就重複，膩了就跳下一格。</p>
+
+    <div class="routine">
+      <div class="step">
+        <div class="min">3–4<small>分鐘</small></div>
+        <div class="body"><h4>暖身 · 和球做朋友</h4><p>撿球大賽或幫球洗澎澎。目的只是讓他先「動起來、笑出來」。</p></div>
+      </div>
+      <div class="step">
+        <div class="min">6–8<small>分鐘</small></div>
+        <div class="body"><h4>主菜 · 追逐躲藏</h4><p>抓尾巴 / 木頭人 / 大野狼挑一個。這是消耗體力、含金量最高的一段。膩了就換另一個。</p></div>
+      </div>
+      <div class="step">
+        <div class="min">4–5<small>分鐘</small></div>
+        <div class="body"><h4>甜點 · 射門收尾</h4><p>標靶或帶球射門。每次都用射門結束，讓他帶著「進球的快感」離場。</p></div>
+      </div>
+      <div class="step">
+        <div class="min">隨時<small>喊卡</small></div>
+        <div class="body"><h4>腹八分就收</h4><p>在他還想玩、還沒膩的時候結束（日本說法「腹八分でやめる」＝吃八分飽）。留一點沒玩夠，下次他才會主動想來。</p></div>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>「幼兒不是討厭練習，他們只是<em>不擅長『等待』和『聽解釋』</em>。一變成遊戲的形式，他們會跑得比誰都拚。」</p>
+      <cite>— PITCH NAVI 監修現役 U10 教練</cite>
+    </div>
+  </div>
+</section>
+
+<section id="src">
+  <div class="wrap">
+    <span class="sec-label">資料來源</span>
+    <h2><span class="num">05</span>這份指南的出處</h2>
+    <div class="src">
+      <h3>核心觀念與遊戲，統整自以下日本青訓資料：</h3>
+      <ul>
+        <li>
+          <a href="https://www.jfa.jp/youth_development/players_first/pdf/u6.pdf" target="_blank">JFA 日本足協 · U6 手冊「サッカーをやってみよう！」</a>
+          <span class="who">官方基準：目標不是培養選手，而是培養活力充沛的孩子；此時期必須是孩子自己會著迷的「遊戲」。</span>
+        </li>
+        <li>
+          <a href="https://pitch-navi.com/articles/toddler-soccer-play" target="_blank">PITCH NAVI · 幼兒（3–6歲）足球遊戲 10 選</a>
+          <span class="who">現役 U10 教練監修：三大原則（不排隊／不解釋／膩了就停）與本頁多數遊戲的來源。</span>
+        </li>
+        <li>
+          <a href="https://coachunited.jp/column/001550.html" target="_blank">COACH UNITED · 讓 U6 專注著迷的訓練「設計」</a>
+          <span class="who">山本雅史教練：用「意象語言」「尋寶／反應遊戲」把單調運球變得讓孩子主動想做。</span>
+        </li>
+        <li>
+          <a href="https://frontista84.com/age4-5-soccer-training/" target="_blank">frontista84 · 4–5 歲幼兒足球練習菜單「運ぶドリブル」</a>
+          <span class="who">實作要點：短菜單組合、以運球為主軸、一定要有帶球射門收尾、4 號球選擇。</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  為 <b>Leon（5 歲）</b> 整理 · 好玩第一，技術以後再說 ⚽
+</footer>
+
+</body>
+</html>
