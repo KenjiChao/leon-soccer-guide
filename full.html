@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>完整翻譯 — 6 歲以下足球青訓教材</title>
+<style>
+  :root{
+    --paper:#F4EFE4; --ink:#2B2621; --ink-soft:#5A5147;
+    --amber:#E0A144; --amber-deep:#B4761E; --leather:#7A3B2E;
+    --line:#D8CDB8; --card:#FBF8F1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,"PingFang TC","Noto Sans TC","Hiragino Sans",sans-serif;
+    background:var(--paper); color:var(--ink); line-height:1.85; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:760px; margin:0 auto; padding:0 20px}
+
+  header{background:var(--ink); color:var(--paper); padding:48px 20px 40px; border-bottom:6px solid var(--amber)}
+  .kicker{font-size:13px; letter-spacing:.22em; color:var(--amber); font-weight:700; margin-bottom:12px}
+  header h1{font-size:clamp(26px,6vw,38px); line-height:1.2; font-weight:800}
+  header p{margin-top:14px; font-size:15.5px; color:#D9CFBE; max-width:56ch}
+  .toplink{display:inline-block; margin-top:20px; font-size:14px; font-weight:700; color:var(--ink);
+    background:var(--amber); padding:10px 18px; border-radius:6px; text-decoration:none}
+
+  /* TOC */
+  .toc{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:22px 20px; margin:32px 0}
+  .toc h2{font-size:14px; letter-spacing:.06em; color:var(--leather); font-weight:800; margin-bottom:14px}
+  .toc ul{list-style:none; display:grid; gap:2px}
+  .toc li a{display:block; padding:11px 8px; border-radius:6px; text-decoration:none; color:var(--ink);
+    font-size:15px; font-weight:600; border-bottom:1px solid var(--line)}
+  .toc li:last-child a{border-bottom:none}
+  .toc li a:hover{background:var(--paper)}
+
+  .tf{display:inline-block; font-size:11px; font-weight:800; color:#fff; padding:2px 9px;
+    border-radius:14px; margin-right:9px; vertical-align:middle; letter-spacing:.03em}
+  .tf.jp{background:#7A3B2E} .tf.en{background:#2B4A7A} .tf.us{background:#3A6A4A}
+  .tf.de{background:#8A6A1E} .tf.sci{background:#5A3A6A}
+
+  /* doc sections */
+  .doc{padding:34px 0; border-top:1px solid var(--line)}
+  .doc-head{margin-bottom:20px}
+  .doc-title{font-size:clamp(20px,4.5vw,26px); font-weight:800; margin:10px 0 6px; line-height:1.3}
+  .doc-src{font-size:13px; color:var(--leather); text-decoration:none; border-bottom:1px solid var(--line)}
+  .doc-src:hover{color:var(--amber-deep)}
+
+  .doc-body h2.doc-h2{font-size:20px; font-weight:800; color:var(--ink); margin:30px 0 10px;
+    padding-left:12px; border-left:4px solid var(--amber); line-height:1.35}
+  .doc-body h3.doc-h3{font-size:17px; font-weight:800; color:var(--amber-deep); margin:24px 0 8px}
+  .doc-body h4.doc-h4{font-size:15.5px; font-weight:800; color:var(--ink); margin:18px 0 6px}
+  .doc-body p{font-size:16px; color:var(--ink); margin:12px 0; line-height:1.85}
+  .doc-body strong{color:var(--ink); font-weight:800}
+  .doc-body em{color:var(--ink-soft); font-style:italic; font-size:14px}
+  .doc-body ul,.doc-body ol{margin:12px 0 12px 4px; padding-left:22px; display:grid; gap:8px}
+  .doc-body li{font-size:16px; color:var(--ink); line-height:1.75}
+  .doc-body ul li{list-style:none; position:relative; padding-left:20px}
+  .doc-body ul li::before{content:"▸"; position:absolute; left:0; color:var(--amber-deep); font-weight:800}
+  .doc-body ol li{list-style:decimal}
+  .doc-body blockquote{border-left:4px solid var(--amber); background:var(--card);
+    padding:12px 16px; margin:16px 0; border-radius:0 6px 6px 0; font-size:16px; color:var(--ink)}
+  .doc-body hr{border:none; border-top:1px dashed var(--line); margin:22px 0}
+
+  .backtop{display:inline-block; margin-top:24px; font-size:13px; color:var(--ink-soft);
+    text-decoration:none; border-bottom:1px solid var(--line)}
+
+  footer{padding:34px 20px 48px; text-align:center; color:var(--ink-soft); font-size:13px}
+  footer a{color:var(--leather)}
+</style>
+</head>
+<body>
+<a id="top"></a>
+<header>
+  <div class="wrap">
+    <div class="kicker">完整翻譯 · 逐段全文</div>
+    <h1>7 份原始教材 · 完整中文翻譯</h1>
+    <p>日本、英格蘭、美國、德國足協的官方文件與運動科學研究，逐段完整翻成中文（非摘要）。每份都附原文出處連結。</p>
+    <a class="toplink" href="./index.html">← 回精華指南</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="toc">
+    <h2>目錄 · 7 份文件</h2>
+    <ul>
+<li><a href="#jp1"><span class="tf jp">🇯🇵 日本 · PITCH NAVI</span>幼兒（3–6歲）足球遊戲 10 選——不教，讓他著迷</a></li>
+<li><a href="#jp2"><span class="tf jp">🇯🇵 日本 · frontista84</span>4–5 歲幼兒足球練習菜單——「運球」是進步之道</a></li>
+<li><a href="#en1"><span class="tf en">🏴 英格蘭 · The FA</span>英足總 England DNA · 基礎期（Foundation Phase）</a></li>
+<li><a href="#en2"><span class="tf us">🇺🇸 美國 · US Soccer</span>美足總 The U.S. Way · 以球員為中心</a></li>
+<li><a href="#en3"><span class="tf us">🇺🇸 美國 · US Soccer</span>Play–Practice–Play 完整方法論（以證據為本）</a></li>
+<li><a href="#en4"><span class="tf de">🇩🇪 德國 · DFB</span>德國足協 2024 兒童足球改革（Funino）</a></li>
+<li><a href="#en5"><span class="tf sci">🔬 研究 · Changing the Game</span>孩子為什麼放棄運動</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+<section class="doc" id="jp1">
+  <div class="wrap">
+    <div class="doc-head">
+      <span class="tf jp">🇯🇵 日本 · PITCH NAVI</span>
+      <h2 class="doc-title">幼兒（3–6歲）足球遊戲 10 選——不教，讓他著迷</h2>
+      <a class="doc-src" href="https://pitch-navi.com/articles/toddler-soccer-play" target="_blank">原文出處 ↗</a>
+    </div>
+    <div class="doc-body">
+<p>買了球和 3 歲的兒子去公園。心想「來踢足球吧」，一傳球出去，孩子卻從球上跨了過去，跑去追鴿子了——。只要是曾想陪幼兒踢足球的父母，大多都經歷過這樣的畫面。先講結論：這不是失敗。幼兒時期的足球不是拿來「教」的，而是要設計出「回過神來才發現自己已經在追著球跑」的情境。這篇文章要介紹 10 個能讓 3～6 歲孩子自己入迷的足球遊戲，並按現場實際受歡迎的程度排序。裡面一個運球練習都不會出現。這樣就對了。</p>
+<p>＼ 給沒時間的人・先講結論 ／</p>
+<p>幼兒時期該做的不是練習，而是「混進了球的遊戲」。口訣只有 3 個——①不要排隊 ②不要用講的（父母先做給孩子看）③膩了就馬上停。這篇文章的 10 個遊戲全都是照這個原則設計的。做得好不好可以不用看。只要孩子在笑，就是大成功。</p>
+<p>這篇文章由一位站在少年足球現場的現役 U10・8 人制教練監修。以前幫忙帶幼兒園兒童的足球教室時，我曾用跟小學生一樣的感覺，把 15 個人排成一列，說「一個一個輪流射門喔」。結果慘敗。等第 3 個孩子踢完，排在隊伍後面的孩子已經開始玩沙了。但幾天後，我讓同一群孩子玩只是往「搶尾巴鬼抓人」裡混進一顆球的遊戲，他們竟然連續跑了 20 分鐘不停。幼兒不是討厭練習，只是不擅長「等待」和「聽說明」而已。一旦變成遊戲的形式，他們比誰都跑得起勁。</p>
+<p>≡</p>
+<p>本篇內容</p>
+<p>01</p>
+<p>幼兒不要「教」反而好的理由</p>
+<p>02</p>
+<p>父母常犯的 3 個 NG</p>
+<p>03</p>
+<p>和球變成朋友的遊戲（1～3）</p>
+<p>04</p>
+<p>追逐・逃跑的遊戲（4～7）</p>
+<p>05</p>
+<p>射門・進球快感的遊戲（8～10）</p>
+<p>06</p>
+<p>持續下去的訣竅是「吃八分飽就停」</p>
+<p>07</p>
+<p>常見問題</p>
+<h2 class="doc-h2">01 幼兒不要「教」反而好的理由（幼児に「教えない」ほうがいい理由）</h2>
+<p>3～6 歲的孩子，正處於每天用驚人的速度學會身體本身各種動作方式的時期。跑、停、跨、蹲、丟。這個時期需要的不是正確的姿勢，而是「各種各樣的動作，大量地、快樂地」去做的份量。</p>
+<p>還有一點。這個年齡的專注力，比大人以為的短得多。一般說法是年齡 ×2～3 分鐘。4 歲的話能撐 10 分鐘就很棒了。也就是說，「30 分鐘的練習菜單」這個發想本身，就不適合幼兒。適合的做法是：一個 5 分鐘的遊戲，只要孩子還在說「再一次！」就一直重複。</p>
+<p>腳內側踢球的方式也好、運球的觸球也好，等上小學後再學都完全來得及。反而是在幼兒時期被灌了一堆「要做正確」的孩子，越容易把足球記成「一直被人囉嗦的東西」。這才是最可惜的地方。</p>
+<h2 class="doc-h2">02 父母常犯的 3 個 NG（親がやりがちなNG3つ）</h2>
+<p>⚠ 讓幼兒 3 分鐘就膩掉的參與方式</p>
+<p>① 讓孩子排隊・輪流等待——幼兒的專注力會在等待的時間裡消失。原則是一人一顆球、全員同時進行。</p>
+<p>② 用言語說明——「像用腳內側把球推出去那樣」這種話傳達不了。父母先做給孩子看，用一句「來模仿！」就開始。</p>
+<p>③ 確認做到了沒——「剛剛那個做到了嗎？再一次」會把遊戲變成測驗。與其確認，不如請父母誇張地表現出懊惱的樣子。</p>
+<p>這 3 點的共通處是：它們「換成小學以後就都是正解」。排隊也好、聽說明也好、回顧檢討也好，總有一天都會需要。只是對幼兒來說全都太早了。這個時期父母的工作不是教練，而是最認真陪玩的玩伴。</p>
+<h2 class="doc-h2">03 和球變成朋友的遊戲（1～3）（ボールと友達になる遊び（1〜3））</h2>
+<p>先從「踢」以前的階段開始。抱著球、滾著球、追著球。這裡是幼兒足球的地基。</p>
+<ol>
+<li>收集球（ボールあつめ）：把球或玩具球撒個 5～6 顆，喊「預備、開始」比賽把球收進籃子（用野餐墊也 OK）。父母和孩子比誰收得多。用手抱著搬也 OK。因為目的是灌輸「球＝好玩的東西」，所以規則鬆鬆的就好。</li>
+<li>滾滾接接（ころころキャッチ）：親子坐著面對面，互相把球滾過去。習慣後就「用小熊的聲音滾過去囉～」「要滾快的囉！」變換球速和聲音。連害怕飛過來的球的孩子，只要是滾動的球都能笑著接下。</li>
+<li>球球泡澡（ボールおふろ）：把球滾動，用肚子、膝蓋、腳底上下滾動它。問孩子「能用腳底摸摸球嗎？」幼兒就會得意地做給你看。其實這就是在打造觸球的感覺本身。</li>
+</ol>
+<p>重點是，這個階段不要執著於一定要用腳處理球。用手抱、用丟的都是正解。「足球不是不能用手嗎」，那是更後面的事。先跟球變好朋友才是第一步。</p>
+<h2 class="doc-h2">04 追逐・逃跑的遊戲（4～7）（追いかける・逃げる遊び（4〜7））</h2>
+<p>無論哪個時代，幼兒最著迷的都是鬼抓人。在這裡混進球，就直接變成足球的動作。開頭寫的「20 分鐘不停」，也是這個系列的遊戲生出來的。</p>
+<ol>
+<li>搶尾巴＋球（しっぽ取り＋ボール）：把毛巾夾在褲子上，玩搶尾巴鬼抓人。只有孩子要一邊滾著球（一開始用手拿著跑也 OK）。「一邊運球一邊觀察周圍」這個足球的核心，會自然而然地混進遊戲裡。</li>
+<li>一二三木頭人・球版（だるまさんがころんだ・ボール版）：父母當鬼。孩子一邊用腳運球一邊靠近，鬼一回頭就把球踩住、緊緊停住。看不出是在練「運球・停球」正是它最大的優點。停下時擺出奇怪的姿勢，會更嗨。</li>
+<li>大野狼來了（おおかみが来たぞ）：父母扮大野狼。「趁大野狼睡著的時候」孩子滾著球前進，聽到「大野狼來啦——！」就抱起球逃回約定好的地方（家）。營造刺激感正中幼兒的點，「再一次」會來個不停。</li>
+<li>模仿爸媽運球（親のまねっこドリブル）：父母不帶球走在前面，走 Z 字、跳步、突然停住。孩子一邊滾著球在後面跟。只要一句「跟得上嗎～？」不用任何說明就能開始。父母動作越怪，孩子越上鉤。</li>
+</ol>
+<p>這 4 個，其實把「運球・停住・抬頭・變換方向」這些運球的要素全都放進去了。但是，沒有必要對孩子說出來。一說出口，遊戲就變成練習；一變成練習，孩子就膩了。這是只要父母自己偷偷知道就好的機關。</p>
+<h2 class="doc-h2">05 射門・進球快感的遊戲（8～10）（蹴る・ゴールの快感遊び（8〜10））</h2>
+<p>最後是「一踢就會發生好玩的事」的體驗。就算沒有球門網，也能製造出好玩的事。</p>
+<ol>
+<li>什麼都能打的標靶（なんでもまとあて）：把寶特瓶或空箱子排好，踢球把它打倒。倒下的瞬間父母配上「哐啷——！」的音效，幼兒就會玩到天荒地老。距離從 2～3 步的份量開始。打不到的距離是大忌。</li>
+<li>爸媽守門員（パパママゴールキーパー）：父母張開腳站著，兩腳之間就是球門。球穿過去時父母就「被你破門啦～！」誇張地倒下去。對幼兒來說獎賞不是進球，而是父母的反應。規則是 10 球裡讓孩子進 8 球。</li>
+<li>踢球宅配便（キックでお届け便）：拜託孩子「把這顆球送去給那邊的溜滑梯先生！」讓他踢著球送過去。送到後就說「溜滑梯先生說牠很開心喔！」用跑腿扮家家酒 × 射門，自然而然就學會控制踢球的方向。</li>
+</ol>
+<p>💬</p>
+<p>現場聽到的家長心聲</p>
+<p>「一想教他他就別過頭去，可是爸爸用胯下當球門倒下時，他就哈哈大笑，一直踢過來。原本以為是練習，現在覺得太傻了。」</p>
+<p>— 幼兒園中班・男孩的父親</p>
+<p>「一二三木頭人的球版，在雨後的公園撐了 30 分鐘。我家因為這個，孩子開始會自己說『拿球去公園吧』了。」</p>
+<p>— 5 歲・女孩的母親</p>
+<p>※ 為監修教練在少年足球現場實際聽到的心聲（以無法辨識個人的形式刊登）。感受因人而異。</p>
+<h2 class="doc-h2">06 持續下去的訣竅是「吃八分飽就停」（続けるコツは「腹八分でやめる」）</h2>
+<p>比 10 個遊戲更重要的訣竅只有 1 個。就是在孩子還在說「還想再玩」的時候收手。</p>
+<p>大人常會覺得「都特地來公園了」，就讓孩子玩到膩為止。但是，玩到膩為止的遊戲，記憶會停在「最後好無聊」。而在「再一次！」「今天到這裡。明天再玩喔」時結束的遊戲，會以「還想再玩」的狀態被延續下去。下次再邀孩子去公園時，上鉤的程度會完全不一樣。</p>
+<p>還有一點。就算做不到，也不要重新教。標靶就算全部沒打中，也用「差一點！球跑掉啦～」笑著進入下一個。幼兒時期的目標不是進步，而是要把「玩球＝快樂」的存款，哪怕多存 1 塊錢也好地存起來。有這筆存款的孩子，上了小學正式開始踢足球時，會進步得驚人。</p>
+<p>如果煩惱該在什麼時期把足球當作才藝來開始，請看〈足球從幾歲開始？〉；關於球以外的戶外遊戲和運動神經的話題，請看〈運動神經靠遊戲來養成〉。兩篇的結論都和這篇一樣：「不用著急」。</p>
+<h2 class="doc-h2">07 常見問題（よくある質問）</h2>
+<p>Q</p>
+<p>孩子 3 歲，讓他進足球學校比較好嗎？</p>
+<p>A</p>
+<p>不需要急。3～4 歲期間，親子的玩球就綽綽有餘地能打好地基。若要考慮足球學校，請去參觀，看「排隊等待的時間是不是很長」「是不是遊戲的形式」。明明是幼兒班，整隊和說明卻很冗長的學校，並不適合這個年齡層。孩子本人開始說「我想去」的時候，就是最好的時機。</p>
+<p>Q</p>
+<p>孩子不踢球，都用手拿著。該糾正嗎？</p>
+<p>A</p>
+<p>不糾正也沒關係。幼兒時期用手抱、丟、滾全都是重要的運動經驗，是和球變好朋友的必經之路。與其說「要用腳做」，不如準備標靶、胯下球門等「一踢就會發生好玩的事」的遊戲，就算放著不管，孩子也會自己開始用腳踢。</p>
+<p>Q</p>
+<p>孩子很快就膩，連 5 分鐘都撐不住。</p>
+<p>A</p>
+<p>那很正常。幼兒的專注力大約是年齡 ×2～3 分鐘，4 歲能撐 10 分鐘就很棒了。一個遊戲玩 5 分鐘就收手，換下一個遊戲，或者那天就結束。重要的不是總時間，而是要以「好好玩」作結。在膩掉之前停下，下次再邀時的上鉤程度就會不一樣。</p>
+<p>Q</p>
+<p>該用什麼樣的球？</p>
+<p>A</p>
+<p>一開始用又輕又軟的球才是正解。橡膠製的輕球，或稍微放掉一點氣的球，就算打到臉也不痛，所以孩子不會害怕。尺寸選在腳邊好滾動的小一點的（3 号球左右或更小的）比較好操作。硬的檢定球等上小學後再用就夠了。</p>
+<p>Q</p>
+<p>父母沒踢過足球也能教嗎？</p>
+<p>A</p>
+<p>反而正好。因為這個時期需要的不是技術指導，而是會認真陪玩的對象。這篇文章的 10 個遊戲，沒有一個需要足球經驗。就算不會顛球，只要能在鬼抓人時認真地跑、在胯下球門誇張地倒下，那就是幼兒時期最棒的教練。</p>
+<p>今晚的一手，是為了遊戲第 4 號「搶尾巴＋球」，先把 2 條毛巾放進包包裡。下次在公園，請開始玩的不是練習，而是鬼抓人。球只要就這樣混在裡面就好。回過神來才發現自己在追著球跑——那就是幼兒時期足球最正確的開始方式。</p>
+<h2 class="doc-h2">本篇監修</h2>
+<p>監</p>
+<p>監修</p>
+<p>現役 U10・8 人制足球教練</p>
+<p>「比起足球厲害的選手，更要培育出透過足球成為『帥氣大人』的孩子」</p>
+<p>投入育成年齡層指導第 3 年，累計面對過約 50 名孩子的現役教練。以判斷・認知・站位為軸，追求「個人的前進力」與「戰術理解」兩者兼顧。</p>
+<p>用品・規則・練習的文章，在公開前都由監修教練確認內容，關於事實的敘述則追溯一次資訊來源加以整理。關於監修者 →</p>
+    </div>
+    <a class="backtop" href="#top">↑ 回目錄</a>
+  </div>
+</section>
+
+<section class="doc" id="jp2">
+  <div class="wrap">
+    <div class="doc-head">
+      <span class="tf jp">🇯🇵 日本 · frontista84</span>
+      <h2 class="doc-title">4–5 歲幼兒足球練習菜單——「運球」是進步之道</h2>
+      <a class="doc-src" href="https://frontista84.com/age4-5-soccer-training/" target="_blank">原文出處 ↗</a>
+    </div>
+    <div class="doc-body">
+<h2 class="doc-h2">足球練習菜單</h2>
+<h2 class="doc-h2">【4 歲、5 歲】幼兒向足球練習菜單　運球（帶球移動）是通往進步的路（【4歳、5歳】幼児向けサッカー練習メニュー　運ぶドリブルが上達への道）</h2>
+<p>2023 年 4 月 11 日</p>
+<p>贊助商連結</p>
+<p>到了 4 歲、5 歲左右，周遭開始學足球的小朋友也變多了吧。</p>
+<p>週六日的足球學校或少年團，平日也有不少孩子把足球當作幼稚園的才藝來開始。</p>
+<p>青蛙：在公園之類的地方，也常看到親子一起踢足球的畫面呢！</p>
+<p>從幼兒時期就做好能扎實打下基礎的練習，等到正式開始踢足球的小學階段，進步的速度也會完全不一樣。</p>
+<p>螾蟆：我家那幾個兒子，光是腳下功夫就厲害到隊上沒人贏得了呢。</p>
+<p>青蛙：足球的技術會照著努力的份量成形，所以孩子也比較容易感受到成就感！</p>
+<p>本篇文章要介紹的是 4 歲 5 歲這類幼兒時期、親子一起就能做的足球練習菜單。</p>
+<p>我是參考以下書籍，來組合孩子大概會喜歡的練習菜單。</p>
+<p>〈幼兒時期就想鍛鍊起來的足球能力〉</p>
+<p>我家長男也一轉眼就從幼稚園畢業，開始了小學生活。 在所屬的足球隊裡，也以「新一年級生」的身分展開了活動……</p>
+<p>2 歲、3 歲向的足球練習菜單整理在以下：</p>
+<p>〈從 2 歲、3 歲就能開始的足球練習菜單〉</p>
+<p>過了 2 歲，腳腰也變得結實，在外面一起玩也變得有趣了呢！ 到了 3 歲左右，對於會彈跳、會滾動的玩球遊戲越來越入迷……</p>
+<p>贊助商連結</p>
+<h2 class="doc-h2">幼兒時期練足球沒有意義！？（幼児期にサッカーを練習することに意味はない！？）</h2>
+<p>「不管幼兒時期足球有多厲害，跟身為選手完成時的實力完全沒有相關」——這種說法常常聽到。</p>
+<p>不過，看看職業足球選手等人的經歷，從幼兒時期就在學足球的選手很多也是事實。</p>
+<p>幼兒時期的足球技術差距，是小到在正式開始學足球的小學年代馬上就會被填平的差距。</p>
+<p>但是，從幼兒時期就一點一滴累積「會運球了！」「射門進了！」這類小小的成功體驗，就會對足球生出正面的自信。</p>
+<p>結果，足球變得有趣，對練習也產生了自己主動想多學的姿態，我想最終才會成長為足球選手而有所大成。</p>
+<p>讀書也是一樣，身為父母，重要的是激起孩子的幹勁、幫他把環境整理好。</p>
+<p>幼兒時期的目的不是把足球變厲害，而是要把能讓孩子喜歡上足球的練習，融入和孩子的遊戲中，這才是重點。</p>
+<p>螾蟆：小心別教太多啦。</p>
+<h2 class="doc-h2">好好傳達足球練習的目的（サッカー練習の目的をしっかり伝える）</h2>
+<p>幼兒時期的足球練習中想注意的一點，就是請有意識地去做到「好好傳達練習的目的」。</p>
+<p>到了 4 歲、5 歲左右，孩子會對各種事情感興趣，也開始能理解事情。</p>
+<p>足球的練習菜單也一樣，孩子沒辦法完全理解練習的內容。</p>
+<p>不過，只要他感興趣，就會聽我們的說明，用自己的方式去思考。</p>
+<p>為什麼要做這個練習——哪怕只有一點點，能一邊思考一邊進行，是很重要的。</p>
+<p>青蛙：養成思考的習慣很重要！</p>
+<p>剛開始和孩子練足球時，會是一邊教好幾次、一邊讓他一點一點理解的過程。</p>
+<p>螾蟆：慢慢來、好好加油喔。</p>
+<p>不過，不只是足球，思考某件事本身就很重要，所以抱著「透過足球來練習『思考』」的心情去做會比較好。</p>
+<p>青蛙：想用「這樣做的話會怎樣呢？」「喔！沒錯！你變厲害了耶！」這類的招呼聲，營造出快樂的氣氛呢！</p>
+<h2 class="doc-h2">和幼兒練足球時的教法訣竅（幼児とサッカーを練習する際の教え方のコツ）</h2>
+<p>實際在推進足球練習時，有一些幼兒時期特有的教法訣竅。</p>
+<p>我想根據幼兒時期的特徵，一個一個說明各自的訣竅。</p>
+<h3 class="doc-h3">把幾個短的菜單組合起來（短いメニューをいくつか組み合わせる）</h3>
+<p>4 歲、5 歲的孩子，能專注在一件事情上的時間非常短。</p>
+<p>一個練習菜單最長大概抓 5 分鐘左右比較好。</p>
+<p>螾蟆：一次的練習全部加起來也該壓在 30 分鐘左右吧。</p>
+<p>然後，加入會摻進各種動作的練習，以孩子能保持專注的訓練為目標吧。</p>
+<p>青蛙：想出好幾個練習菜單，正是家長大顯身手的地方！</p>
+<h3 class="doc-h3">做不到也不要死守（出来なくても固執しない）</h3>
+<p>雖然是理解力越來越好的年代，但孩子還遠遠沒辦法完美地完成教過的菜單。</p>
+<p>這種時候，就切出時間，找出練習中做得到的地方，先誇獎他吧！</p>
+<p>青蛙：不管是誰，被誇獎了就會想再加油對吧！</p>
+<h3 class="doc-h3">加入協調性訓練吧（コーディネーショントレーニングを取り入れよう）</h3>
+<p>到 5 歲左右為止，孩子要把手腳照自己想的那樣動起來，都還很不擅長。</p>
+<p>習慣自己身體的動作方式，是足球進步最快的捷徑。</p>
+<p>配合足球的練習，稍微加入一點跑步、跳躍等活動全身的運動吧。</p>
+<p>青蛙：我家小時候也是，除了足球外還帶了跳繩、棒球和球棒去！</p>
+<p>螾蟆：爬樹之類的，當作協調性訓練也是超棒的喔。</p>
+<p>〈【幼兒向】對足球也有幫助！讓運動神經變好的協調性訓練〉</p>
+<p>不管足球還是棒球，透過重複同樣的動作，都能提高正確性和再現性。 常聽人說「練習做不到的事，比賽也做不到」……</p>
+<h3 class="doc-h3">以運球練習為中心來組菜單吧（ドリブル練習を中心にメニューを構成しよう）</h3>
+<p>幼兒時期到小學的年代，是球感（控球）飛躍性進步的時期。</p>
+<p>而且，低年級也有「運球厲害的孩子容易大顯身手」的一面，所以推薦以運球練習為中心來組菜單。</p>
+<p>螾蟆：首先，習慣球才是重要的。</p>
+<p>〈幼兒足球只要運球厲害就能大顯身手！也介紹練習菜單〉</p>
+<p>我家長男也上了中班，加入了當地的足球隊。 因為還是中班生，練習菜單也是像以下這樣簡單的……</p>
+<h3 class="doc-h3">球盡量用足球吧（ボールは出来ればサッカーボールを使おう）</h3>
+<p>練習用的球，比起橡膠球之類的，用足球會比較好。</p>
+<p>而且，就算是幼兒，身體長得比較大的孩子推薦用 4 号球的足球。</p>
+<p>大班生等孩子的情況，特別推薦選 4 号球的足球。</p>
+<p>因為升上小學後也能繼續用，而且運球練習時，有一定重量的 4 号球足球會比較好控制。</p>
+<p>青蛙：4 号球種類也多、容易入手，也是它的優點！</p>
+<p>螾蟆：配合孩子的發育來選喔。</p>
+<p>〈【3 号球？4 号球？】兒童用足球的尺寸推薦哪種？〉</p>
+<p>在幼稚園或托兒所當作才藝，從中班・大班世代開始踢足球的孩子很多吧。 我家孩子是從小班……</p>
+<h2 class="doc-h2">親子兩人就能做的練習菜單（親子二人で出来る練習メニュー）</h2>
+<p>接下來，要開始介紹實際的練習菜單。</p>
+<p>首先，是在公園之類的地方親子兩人就能做的菜單。</p>
+<p>練習菜單請配合孩子的運動程度，階段性地把難度往上提。</p>
+<p>青蛙：就算不是全部難度都做得到，也把做得到的地方誇獎一下，連結到成就感吧！</p>
+<h3 class="doc-h3">運球練習（ドリブル練習）</h3>
+<p>首先，習慣「和球一起跑」吧。</p>
+<p>青蛙：一開始把球踢得大力、踢遠一點也沒關係！</p>
+<p>螾蟆：先習慣足球吧。</p>
+<ul>
+<li>20m 跑（無球）</li>
+<li>20m 跑（帶球運球）</li>
+<li>鬼抓人（帶球運球）</li>
+<li>運球後射門</li>
+</ul>
+<p>練習時，推薦一定要做④運球後射門。</p>
+<p>為了射門該把球放在哪裡，孩子能自然而然地學會。</p>
+<p>青蛙：孩子最愛射門了，所以有射門的話會比較嗨！</p>
+<p>用公園的遊具或樹木當作球門也可以，帶個簡單的迷你球門去也行。</p>
+<p>〈【便宜！組裝簡單！】兒童用足球門室內室外的推薦是？〉</p>
+<p>足球的控球，取決於小時候摸過多少次球，進步的速度差很多。 身為足球傻瓜父母的我……</p>
+<h3 class="doc-h3">傳球練習（パス練習）</h3>
+<p>老實說，這個年代的孩子不喜歡傳球練習。</p>
+<p>如果稍微做一下就馬上膩了，別勉強，乾脆俐落地換到別的菜單吧。</p>
+<p>青蛙：與其說是傳球練習，不如當成「傳球扮家家酒」來快樂地玩吧！</p>
+<p>螾蟆：用手把球丟出去，對體驗球的彈跳之類的也很重要喔。</p>
+<ul>
+<li>用手把球丟出去（短距離）</li>
+<li>用手把球丟出去（長距離）</li>
+<li>面對面用慣用腳傳球。用腳底把球停住</li>
+<li>自由運球，聽父母的信號用慣用腳傳球</li>
+</ul>
+<h3 class="doc-h3">1 對 1（1対1）</h3>
+<p>1 對 1 是孩子最愛的菜單。</p>
+<p>因為也能理解足球的進攻和防守，1 對 1 的練習每次都一定要練會比較好。</p>
+<ul>
+<li>護球（父母護球）</li>
+<li>護球（孩子護球）</li>
+<li>設球門的 1 對 1</li>
+</ul>
+<p>青蛙：護球就是不讓球被搶走！用背部等身體部位擋住孩子吧！</p>
+<p>螾蟆：就算不教，孩子也會繞到後面把球搶走喔。小心別教太多！</p>
+<h2 class="doc-h2">一個人也能做的練習菜單（一人でも出来る練習メニュー）</h2>
+<p>接下來，介紹孩子一個人就能進行的練習菜單。</p>
+<p>像是跟媽媽去公園的情況等，是孩子自己就能做的菜單。</p>
+<p>這邊也一樣，配合階段把難度往上提。</p>
+<h3 class="doc-h3">各種跑法的練習（協調性訓練）（色々な走り方の練習（コーディネーショントレーニング））</h3>
+<p>因為是很樸素的運動，孩子一個人不太願意做，不過，把提升運動能力效果很高的協調性訓練也融入遊戲中吧。</p>
+<ul>
+<li>側向跑（左右）</li>
+<li>向後衝刺</li>
+<li>跳房子（單腳單腳雙腳）</li>
+<li>跳步（Skip）</li>
+<li>跳躍衝刺（幫孩子設定跳躍的目標吧）</li>
+</ul>
+<p>螾蟆：跳房子啦跳步啦，很難對吧。</p>
+<p>青蛙：我家孩子過了 6 歲，才終於會跳房子了！就算慢也是會做到的！</p>
+<h3 class="doc-h3">把球高高拋起再踢！（ボールを高く上げてキック！）</h3>
+<p>對孩子來說，把球高高踢起的技術當然難，用手把球高高丟起的技術好像也很難。</p>
+<p>如果只做足球的練習，下半身的動作偏多，上半身的動作無論如何都會被疏忽。</p>
+<p>「丟」這個動作，是以上半身為中心來帶動前進的動作。</p>
+<p>希望從平常的遊戲開始，就意識到不只做足球的動作，也要活動全身。</p>
+<p>青蛙：我家孩子丟球的動作也還不太行……</p>
+<p>這個練習菜單的目的，是學習球的運動方式和性質，以及培養空間掌握能力。</p>
+<ul>
+<li>把球丟到視線高度</li>
+<li>把球高高丟過頭頂</li>
+<li>把球高高丟起，等彈跳停止後再踢</li>
+<li>把球高高丟起，彈跳中用腳底停住</li>
+<li>把球高高丟起，彈一下後再踢</li>
+</ul>
+<p>青蛙：也請挑戰看看用手把高高升起的球接住！</p>
+<p>螾蟆：孩子連高的球也會怕，要慢慢來喔。</p>
+<h3 class="doc-h3">球感（ボールフィーリング）</h3>
+<p>腳下的技術從這個年代開始培養，會成為很大的資產。</p>
+<p>球感練習不只用足球，用網球或橄欖球等來做也很有效果。</p>
+<p>青蛙：控制尺寸或形狀不同的球，也是不錯的練習！</p>
+<p>螾蟆：球感的練習赤腳做更好。</p>
+<ul>
+<li>用腳底移動球</li>
+<li>左右腳底交替觸球（有節奏地！）</li>
+<li>用左右腳的足弓部位（腳內側）把球在胯下之間移動</li>
+<li>用腳底移動球的同時向後走</li>
+<li>父母把球丟出，用腳控制</li>
+<li>父母把球丟出，用身體各個部位控制</li>
+</ul>
+<p>為了提升孩子的動力，讓他看看 YouTube 上上傳的同年齡超級小孩們的影片，也很有效果。</p>
+<p>螾蟆：YouTube 上盡是些怪物等級的傢伙喔。</p>
+<p>青蛙：重點是要讓他看的畢竟是同世代孩子們的練習畫面！</p>
+<p>〈【幼兒向】把少年足球練習影片依年代整理好了【YouTube】〉</p>
+<p>再怎麼喜歡足球的孩子，也一定會有沒辦法積極投入練習的時候。 和爸爸一起在家……</p>
+<h2 class="doc-h2">總結（まとめ）</h2>
+<p>介紹了 4 歲、5 歲向的具體足球練習菜單。</p>
+<p>為了讓孩子們能把練習當作遊戲的延伸來快樂地做，把菜單調整成適合每個孩子的樣子，這一點也很重要。</p>
+<p>不只是練習菜單，父母能為孩子做的，就是「把環境整理好」。</p>
+<p>千萬別讓父母太過認真，希望父母也抱著和孩子一起享受的心情去進行。</p>
+<p>青蛙：把練習畫面用照片或影片保存下來，不只能提升練習效率，也會成為孩子的回憶，很推薦！</p>
+<p>〈適合足球等運動拍攝的攝影機挑選方式，以及 CP 值高的推薦 3 選〉</p>
+<p>在對少年足球很熱心的家庭裡，親子一起訓練的情況也很多吧。 找出晨練或睡前練習等空檔時間……</p>
+<p>Facebook</p>
+<p>Twitter</p>
+<p>Email</p>
+<p>分享</p>
+<p>贊助商連結</p>
+<p>贊助商連結</p>
+    </div>
+    <a class="backtop" href="#top">↑ 回目錄</a>
+  </div>
+</section>
+
+<section class="doc" id="en1">
+  <div class="wrap">
+    <div class="doc-head">
+      <span class="tf en">🏴 英格蘭 · The FA</span>
+      <h2 class="doc-title">英足總 England DNA · 基礎期（Foundation Phase）</h2>
+      <a class="doc-src" href="https://www.thefa.com/learning/england-dna-foundation-phase" target="_blank">原文出處 ↗</a>
+    </div>
+    <div class="doc-body">
+<h2 class="doc-h2">英格蘭 DNA：基礎階段（Foundation Phase）｜英足總 The FA</h2>
+<h2 class="doc-h2">基礎階段</h2>
+<p>身為基礎階段的教練，你的訓練課就是一名球員在足球路上的「第一步」。把這一步帶對了，你就能幫助隊伍培養出對身體活動的熱愛——以及在人生各個領域都用得上的技能與能力。那麼，我們就開始吧。</p>
+<p>本區內容以「英格蘭 DNA」（England DNA）為基礎，說明如何指導 5 至 11 歲的球員。不過，兒童發展並不是一門界線分明的科學，因此我們也納入了適用於 5 歲以下、乃至 12 歲球員的資訊。為了反映在這個年齡跨度中你會看到的差異，我們常把建議切分成兩條主線：指導 5 至 8 歲球員，以及指導 9 至 12 歲球員。</p>
+<p>基礎階段的「英格蘭 DNA」體認到：隊伍的發展不只有技術面。如果你想支持整個「大局」，採取整體式（holistic）的取徑就很重要，要兼顧英足總「四角模型」（The FA 4 Corner Model）的所有面向：社會、心理、體能，以及技術／戰術。</p>
+<p>請記住基礎階段英足總負責人皮特・史特吉斯（Pete Sturgess）的話：「球員的年少只有一次，所以我們有責任把這件事做對。」（<em>&quot;Players are only young once, so we owe it to them to get this right.&quot;</em>）</p>
+<p>請記住：基礎階段只是起點。而且，無論你目前正帶著一支隊伍，或是想投入其中，這場「遊戲的目標」都是要創造一段正向而愉快的足球體驗。這不僅能幫助你的球員建立多元的技能，也能培養他們對身體活動與運動終生的熱愛。</p>
+<p>「在基礎階段擔任教練，提供了一個獨一無二的機會：要影響一個孩子對運動與學習的態度，沒有比他們幼年時期更好的時機了。」——皮特・史特吉斯（Pete Sturgess），英足總基礎階段全國負責人（<em>&quot;Being a coach in the Foundation Phase offers a unique opportunity: there&#x27;s no better time to influence a child&#x27;s attitude to sport and learning than during their early years.&quot; — Pete Sturgess, FA national lead for the Foundation Phase</em>）</p>
+    </div>
+    <a class="backtop" href="#top">↑ 回目錄</a>
+  </div>
+</section>
+
+<section class="doc" id="en2">
+  <div class="wrap">
+    <div class="doc-head">
+      <span class="tf us">🇺🇸 美國 · US Soccer</span>
+      <h2 class="doc-title">美足總 The U.S. Way · 以球員為中心</h2>
+      <a class="doc-src" href="https://www.ussoccer.com/us-way/player-development/coaching-guide/u5" target="_blank">原文出處 ↗</a>
+    </div>
+    <div class="doc-body">
+<h2 class="doc-h2">The U.S. Way——以球員為中心的取徑（美國足協 US Soccer，U5 教練指南）</h2>
+<p>「The U.S. Way——以球員為中心的取徑」將幫助你：</p>
+<ul>
+<li>更深入理解你所帶的孩子，包括他們所處的發展階段。</li>
+<li>理解如何把比賽日（gameday）當成一個機會，讓隊上每一個個體都能有所發展。</li>
+<li>創造正向的學習環境，幫助每一個個體透過足球享受樂趣並成長。</li>
+</ul>
+<p>我們體認到，每一名球員、每一間俱樂部、每一個組織都不一樣，各有其獨特的需求。本文所呈現的想法只是作為指引，應該依照各自的環境與情境加以調整。</p>
+<p>The U.S. Way 本質上就是我們共同的發展哲學。我們希望這套哲學能滲透到整個生態當中——涵蓋我們如何依據每一名球員、教職員與教練各自的需求，去培養他們。一切都始於「以球員個人為中心」這個核心：我們所做的每一件事，都以球員個人為出發點。我們希望家長能善用我們，去了解對自己孩子而言最好的路徑與最好的系統是什麼。我們希望教練能運用「年齡與階段」（ages and stages）的架構，為他們的球員提供一套優良的教練方法學框架。</p>
+<p>對於使用這份資源的教練來說，真正的重點在於：看清楚站在你面前的球員是誰。這個個體需要什麼？他的年齡是幾歲、發展處於哪個階段？每一名球員，無論實際年齡多大，都會處在不同的階段。所以，我們要如何在球員所在之處去接住他、去滿足他個人的需求？</p>
+    </div>
+    <a class="backtop" href="#top">↑ 回目錄</a>
+  </div>
+</section>
+
+<section class="doc" id="en3">
+  <div class="wrap">
+    <div class="doc-head">
+      <span class="tf us">🇺🇸 美國 · US Soccer</span>
+      <h2 class="doc-title">Play–Practice–Play 完整方法論（以證據為本）</h2>
+      <a class="doc-src" href="https://learndeep.org/wp-content/uploads/Play_Practice_Play.pdf" target="_blank">原文出處 ↗</a>
+    </div>
+    <div class="doc-body">
+<h2 class="doc-h2">美國足協基層足球教練教育（U.S. Soccer Grassroots Coach Education）</h2>
+<h2 class="doc-h2">「玩—練—玩」模型（Play-Practice-Play, PPP Model）：一套以證據為本的取徑</h2>
+<p><em>美國足協（U.S. Soccer）｜1801 S. Prairie Ave.｜Chicago, IL 60616</em></p>
+<hr>
+<h2 class="doc-h2">前言</h2>
+<p>當孩子來到訓練場時，他們並不太想排隊站好、繞圈跑、做機械式反覆練習（drills），或聽人講課；他們只想玩得開心、和隊友建立連結，並透過投入而愉快的活動來學習。因此，教練在創造與設計自己的訓練環境時，把這些因素放在心上就很重要。</p>
+<p>至於訓練設計本身，關於「第一區發展階段」（Zone 1 development，約 6 至 12 歲）期間，學習活動在數量、質量、類型、順序與組合上的最佳配置為何——這場辯論在運動員發展與表現的學術文獻中仍在持續進行。</p>
+<p>雖然訓練設計並沒有唯一的最佳作法，但運動員發展研究指出：參與不同類型的學習活動（例如由孩子主導或由成人主導、有結構或無結構的活動）——像是「非正式遊玩」（informal play）、「刻意遊玩」（deliberate play），或是更有結構的活動如「刻意練習」（deliberate practice）——都是運動員發展歷程中的重要影響因素。近期針對足球的研究更指出：高度投入於低結構的非正式遊玩，或是足球專項的刻意遊玩活動，是高水準表現者在運動員發展歷程與訓練路徑中的重要一環。</p>
+<h3 class="doc-h3">球員學到的是（PLAYERS LEARN）：</h3>
+<ul>
+<li><strong>學到他們喜歡什麼</strong>——以內在動機（intrinsic motivation）作為學習的驅動力。</li>
+<li><strong>學到他們需要什麼</strong>——能夠遷移，訓練與比賽之間沒有落差。</li>
+<li><strong>學會判讀、分析與決策</strong>——球員如何感知並解讀一個情境，是決定他行為的驅動力。</li>
+<li><strong>學會有創造力</strong>——主動尋找解決方案。</li>
+<li><strong>學會反思</strong>——思考自己的經驗，以及如何運用這些經驗。</li>
+<li><strong>學會學習</strong>——發展並改善自己的學習習慣。</li>
+<li><strong>學會成為獨立的批判性思考者</strong>——成為獨立／社會化、負責任／能擔當的成年人。</li>
+</ul>
+<h3 class="doc-h3">美國足協基層球員發展哲學（U.S. Soccer Grassroots Player Development Philosophy）</h3>
+<p>在基層層級，孩子透過在愉快環境中的「類比賽」（game-like）體驗來學習與發展，把潛能發揮到極致——這樣的環境支持每個人的個別成長。</p>
+<hr>
+<h2 class="doc-h2">三階段訓練課：玩—練—玩模型（第一區發展階段）</h2>
+<p>整堂訓練課分為三個訓練階段（TRAINING PHASE）：</p>
+<ul>
+<li><strong>第一階段：第一次玩（PHASE 1: FIRST PLAY）</strong></li>
+<li><strong>第二階段：練習（PHASE 2: PRACTICE）</strong></li>
+<li><strong>第三階段：第二次玩（PHASE 3: SECOND PLAY）</strong></li>
+</ul>
+<p>以下把三個階段各自的理論框架、目的、活動特徵與教學作為，整理如下。</p>
+<h3 class="doc-h3">第一階段：第一次玩（FIRST PLAY）</h3>
+<p><strong>理論框架（Theoretical Framework）：</strong></p>
+<ul>
+<li>透過類比賽的活動來學習並提升質量。</li>
+</ul>
+<p><strong>目的（Purpose）：</strong></p>
+<ul>
+<li>以活動／比賽情境，把球員的注意力聚焦到訓練目標上。</li>
+</ul>
+<p><strong>活動特徵（Activity Characteristics）：</strong></p>
+<ul>
+<li>有趣、主動投入、有大量反覆、具挑戰性。</li>
+</ul>
+<p><strong>教學作為（Teaching Actions）：</strong></p>
+<ul>
+<li>用有趣的方式為訓練揭開序幕。</li>
+<li>以比賽把球員導向訓練目標（2v2、3v3、4v4）。</li>
+<li>有趣、具包容性、隱性學習（implicit learning）、鼓勵創造力。</li>
+<li>從旁觀察監看（「讓比賽來教」——&#x27;the game teaches&#x27;）。</li>
+</ul>
+<h3 class="doc-h3">第二階段：練習（PRACTICE）</h3>
+<p><strong>理論框架（Theoretical Framework）：</strong></p>
+<ul>
+<li>「玩中練」活動（Play-Practice activities，Launder）。</li>
+<li>「以理解為導向的比賽教學」（Teaching Games for Understanding，Griffin &amp; Butler）。</li>
+</ul>
+<p><strong>目的（Purpose）：</strong></p>
+<ul>
+<li>有意識的學習（conscious learning）。</li>
+</ul>
+<p><strong>教學作為（Teaching Actions）：</strong></p>
+<ul>
+<li>五要素（Five elements，1–5）。</li>
+<li>關鍵詞（Key words）。</li>
+<li>引導式提問（Guided questions）。</li>
+<li>正向強化（Positive reinforcement）。</li>
+<li>主動教學（Active teaching）。</li>
+<li>示範（Demonstration）。</li>
+<li>回饋（Feedback）。</li>
+<li>學習圈（Learning circle）。</li>
+</ul>
+<h3 class="doc-h3">第三階段：第二次玩（SECOND PLAY）</h3>
+<p><strong>理論框架（Theoretical Framework）：</strong></p>
+<ul>
+<li>透過實際踢球進行情境化學習（contextual learning）。</li>
+<li>讓他們踢（Let them play——Fonseca、Tamarit）。</li>
+</ul>
+<p><strong>教學作為（Teaching Actions）：</strong></p>
+<ul>
+<li>以比賽形式呈現訓練目標（依最大出賽名單人數而定）。</li>
+<li>給球員機會去實踐他們所學到的東西。</li>
+<li>有趣、雙方人數對等、位置輪換、有規則。</li>
+<li>觀察（Observation）。</li>
+<li>確認球員是否理解（Checking for understanding）。</li>
+<li>五要素（1–5）。</li>
+<li>關鍵詞。</li>
+<li>引導式提問。</li>
+<li>正向強化。</li>
+<li>回饋。</li>
+</ul>
+<hr>
+<h2 class="doc-h2">以證據為本的訓練設計（Evidence-Based Practice Design）</h2>
+<p>在基層層級，美國足協教練教育部門（U.S. Soccer Coach Education Department）致力於採用一套以證據為本的取徑，來進行教練教育與球員發展。「以證據為本的教練法」（Evidence-Based Coaching, EBC）著重整合三個關鍵要素：1. 關於球員發展的最佳現有研究；2. 教練的專業能力；3. 對學習者（也就是球員）之需求與價值觀的體察與重視。基於此，為了嘗試打造一個符合發展階段的訓練環境，美國足協採用了三階段的訓練計畫模型（也就是「玩—練—玩」）。這套取徑與運動員發展路徑的最佳現有研究相互呼應，其設計用意在於把球員的樂趣、內在動機與技能發展最大化。</p>
+<hr>
+<h2 class="doc-h2">第一階段：玩——「刻意遊玩」（STAGE 1: PLAY - &#x27;DELIBERATE PLAY&#x27;）</h2>
+<p>當球員來到訓練場時，教練創造一個投入而愉快的環境是很重要的。讓球員投入的一種方式，就是透過低結構的小場比賽（例如 2v2、3v3、4v4）——這在運動員發展文獻中也被稱為「刻意遊玩」（deliberate play）。「刻意遊玩」指的是把正式比賽形式縮小、非正式的類比賽呈現方式（例如小場比賽），其設計的首要目的就是為了享受樂趣。這些「刻意遊玩」的比賽最理想的狀態是由球員自己主導，教練只在旁邊寬鬆地觀察監看；重點放在推動「競賽的樂趣」，而不是結果（也就是輸贏）。</p>
+<blockquote>對基層教練而言，關鍵在於：「刻意遊玩」能促進樂趣、包容與發展。</blockquote>
+<p>當球員更投入、感覺被接納、玩得開心時，很可能會提升他們繼續踢球的動機。這在青春期尤其重要，因為那個階段的流失率較高。當教練設計出能促成「刻意遊玩」機會的訓練時，這應該被視為刻意地去營造一個有趣、以球員為中心的環境，讓技術與戰術意識的發展有了情境脈絡。當球員投入於「刻意遊玩」時，比賽／環境本身就是最主要的老師，而教練扮演的是引導者（facilitator）的角色——在必要時，引導球員自己找到解答，而不是直接給答案。</p>
+<p>在訓練的這個階段，教練的目標是協助創造一個透過「刻意遊玩」把球員導向訓練目標的環境。雖然由教練來指導並針對表現提供回饋確實有明顯的好處，但我們也必須體認到：在教與學的歷程中，我們不見得每次都要「指導」，學習與發展才會發生。</p>
+<h3 class="doc-h3">「刻意遊玩」的好處</h3>
+<p>越來越多的運動員發展文獻指出，投入於「刻意遊玩」是重要的，對兒童的身體、社會、認知與情緒發展都有許多正面的影響。更具體地說，探討菁英足球員訓練路徑的研究指出：高度投入於較低結構、足球專項的「刻意遊玩」與練習活動，是達到高水準表現的重要一環。「刻意遊玩」的好處包括：</p>
+<ul>
+<li>提升樂趣與內在動機。</li>
+<li>促進動作（motor）與認知發展。</li>
+<li>促進比賽意識（game awareness）。</li>
+<li>促進包容。</li>
+<li>讓球員頻繁地觸球。</li>
+<li>促進社會互動與問題解決能力。</li>
+<li>促進類比賽的決策（也就是戰術線索的判讀）。</li>
+<li>讓技術發展有了情境脈絡（也就是：技能＝把技術運用在戰術上）。</li>
+</ul>
+<hr>
+<h2 class="doc-h2">第二階段：練習活動（STAGE 2: PRACTICE ACTIVITIES）</h2>
+<p>在第二階段，也就是「練習」（practice）階段，目標是創造一個環境，讓球員能圍繞著訓練目標、以及相關的團隊戰術原則與球員的關鍵素質，去發展自己。「刻意遊玩」是一個正向的暖身開場，在訓練設計中扮演重要角色，但它對學習歷程的促進只能到某個程度為止。為了進一步促進學習，球員必須投入不同形式的學習活動，例如「玩中練」活動（play-practice activities）、「以理解為導向的比賽教學」（Teaching Games for Understanding, TGFU），或是「刻意練習」（deliberate practice）的成分。</p>
+<p>研究顯示，把發展最大化的訓練路徑是動態的，技能的習得是非線性的，而且運動員為了達到最佳表現，在所投入的訓練活動類型上是有彈性的。關鍵在於：創造一個訓練環境，讓它整合出各種符合發展階段的活動，取得平衡，為學習者找到恰到好處的「挑戰點」（challenge point）。「玩中練」活動指的是由教練設計並引導的活動，用以改善表現的某些面向（例如技術能力、團隊戰術原則或關鍵素質），同時也強調樂趣與享受。TGFU 模型是一種以比賽為中心的教學法，著重於在「改良式比賽」（modified games）的框架內發展戰術意識與決策能力，並幫助學習者理解在比賽情境中「何時、何處、如何」運用自己的技術。至於「刻意練習」，則更有結構，主要聚焦於提升表現的目標，而不只是參與本身固有的樂趣。</p>
+<blockquote>一名教練的關鍵素質之一，就是有能力設計出「兼具愉快、教育性、類比賽且具挑戰性」且符合發展階段的學習活動。</blockquote>
+<p>符合發展階段的練習活動具有以下特徵：</p>
+<ul>
+<li>頻繁的技術反覆——提升對球的精熟度（ball mastery）。</li>
+<li>活動以球員為中心。</li>
+<li>活動本質上是類比賽的（例如問題解決、決策）。</li>
+<li>提供指導性回饋的機會，以促進學習與發展。</li>
+</ul>
+<p>必須再次強調的是：雖然有些活動可以較有結構、由教練主導，但它們並不見得就得比較不好玩。基層教練的目標，是設法創造一個投入的環境，並在其中納入兼具教育性、愉快且類比賽的活動。</p>
+<hr>
+<h2 class="doc-h2">第三階段：比賽——讓他們踢！（STAGE 3: THE GAME - LET THEM PLAY!）</h2>
+<p>在每一堂訓練的最後階段，都應該給球員機會與自由，讓他們在一個複製正式比賽的形式（例如 5v5、7v7、9v9）中不受打斷地踢球。這是球員展現自我的時刻——不被逐一微管理（micro-managed）——並在比賽情境中走過「把技術與戰術能力實際運用出來」的歷程。在訓練的這個階段，教練是在觀察球員能否把練習中學到的技能遷移到比賽環境裡。當球員無法找到解答、或無法做出必要的修正時，正是教練在適當的「可教時刻」（teachable moments）介入學習歷程的機會。</p>
+<hr>
+<h2 class="doc-h2">總結（SUMMARY）</h2>
+<p>最後，一個有效的基層訓練環境，其關鍵要素就在於：在「刻意遊玩」、多樣化的學習活動，以及定期的比賽機會之間，取得謹慎的平衡。這三個要素結合起來，就能創造出一個有效的訓練環境，把球員的樂趣與發展都最大化。</p>
+<hr>
+<h2 class="doc-h2">參考文獻（REFERENCES）</h2>
+<ol>
+<li>Côté, J., Erickson, K., &amp; Abernethy, B. (2013). Play and practice during childhood. In Côté, J., &amp; Lidor, R., (2013). Condition&#x27;s in Childhood talent development in sport (pp. 9-20).</li>
+<li>Côté, J., Erickson, K., (2015). Diversification and deliberate play during the sampling years. Routledge Handbook of Sport Exercise.</li>
+<li>Hornig, M., Aust, F., &amp; Güllich, A. (2016). Practice and play in the development of German top-level professional football players. European Journal Sport Science. 16, 96–105.</li>
+<li>Forsman, H., Blomqvist, M., Davids, K., Konttinen, N., &amp; Liukkonen, J. (2016). The role of sport-specific play and practice during childhood in the development of adolescent Finnish team sport athletes. International Journal of Sports Science &amp; Coaching, 11(1). 69-77.</li>
+<li>Memmert, D., &amp; Baker, J., Bertsch. (2010). Play and practice in the development of sport-specific creativity in team ball sports. High Ability Studies, 21. 3-18.</li>
+<li>Santos S., D., L., Memmert, D., Sampaio, J., &amp; Leite, N. (2016). The Spawns of Creative Behavior in Team Sports: A Creativity Developmental Framework. Frontiers in Psychology. 7:1282.</li>
+<li>Seifert, L., &amp; Davids, K. (2015). Ecological Dynamics: a theoretical framework for understanding sport performance, physical education and physical activity. CS-DC&#x27;15 World e-conference, Tempe, United States.</li>
+<li>Zibung, M., &amp; Conzelmann, A. (2013). The role of specialization in the promotion of young football talents: A Person-oriented study. European Journal of Sport Science, 1-9.</li>
+<li>Baker, J., Côté, J., &amp; Abernethy, B. (2003a). Learning from the experts: Practice activities of expert decision makers in sport. Research Quarterly for Exercise and Sport, 74(3), 342–347.</li>
+<li>Baker, J., Côté, J., &amp; Abernethy, B. (2003b). Sport-specific practice and the development of expert decision-making in team ball sports. Journal of Applied Sport Psychology, 15, 12–25.</li>
+<li>Berry, J., Abernathy, B., &amp; Côté (2008). The contribution of structured activity and deliberate play to the development of expert perceptual and decision making skills. Journal of Sport and Exercise Science, 30(6). 685-708.</li>
+<li>Ericsson, K. A., Krampe, R. T., &amp; Tesch-Römer, C. (1993). The role of deliberate practice in the acquisition of expert performance. Psychological Review, 100(3), 363–406.</li>
+<li>Ford, P. R., &amp; Williams, A. M. (2012). The developmental activities engaged in by elite youth soccer players who progressed to professional status compared to those who did not. Psychology of Sport and Exercise, 13(3), 349-352.</li>
+<li>Ford, P. R., Ward, P., Hodges, N. J., &amp; Williams, A. M. (2009). The role of deliberate practice and play in career progression in sport: the early engagement hypothesis. High Ability Studies, 20, 65-75.</li>
+<li>Côté, J., Baker, J., &amp; Abernethy, B. (2003). From play to practice: A developmental framework for the acquisition of expertise in team sport. In J. Starkes &amp; K. A. Ericsson (Eds.), the development of elite athletes: Recent advances in research on sport expertise (pp. 89-113). Champaign, IL: Human Kinetics.</li>
+<li>Côté, J., Baker, J., &amp; Abernethy, B. (2007). Practice and play in the development of sport expertise. In R. Eklund &amp; G. Tenenbaum (Eds.), Handbook of sport psychology (3rd ed., pp. 184-202). Hoboken, NJ: Wiley.</li>
+<li>Baker, J., &amp; Côté, J. (2006). Shifting training requirements during athlete development: Deliberate practice, deliberate play and other sport involvement in the acquisition of sport expertise. In Dieter Hackfort and Gershon Tenenbaum (Ed.), Essential processes for attaining peak performance (pp. 92-109). Oxford, United Kingdom: Meyer and Meyer Sport.</li>
+<li>Côté J, Lidor, R., &amp; Hackfort, D. (2009). ISSP Position Stand: To Sample or to Specialize? Seven Postulates about Youth Sport Activities that Lead to Continued Participation and Elite Performance. International Journal of Sport Exercise and Psychology, 9, 07-17.</li>
+<li>Jarvis, P. (2007). Dangerous activities within an invisible playground: A study of emergent male football play and teachers&#x27; perspectives of outdoor free play in the early years of primary school. International Journal of Early Years Education, 15(3), 245–259.</li>
+<li>Côté J, Abernethy B. (2012). A developmental approach to sport expertise. In: Murphy S, editor. The Oxford Handbook of Sport and Performance Psychology. New York, NY: Oxford University Press; 2012:435–447.</li>
+<li>Launder, A. G. (2001). Play practice: The games approach to teaching and coaching sports. (1st Ed.) Champaign, IL: Human Kinetics.</li>
+<li>Launder, A. G. &amp; Piltz, W. (2013). Play practice: Engaging and developing skilled players from beginner to elite. (2nd Ed.). Champaign, IL: Human Kinetics.</li>
+<li>Griffin, L. L., &amp; Butler, J. I. (Eds.). (2005). Teaching games for understanding: Theory, research, and practice. Champaign, IL: Human Kinetics.</li>
+<li>Guadagnoli, M, A., Lee, T., D. (2004). Challenge Point: A framework for conceptualizing the effects of various conditions in motor learning. Journal of Motor Behavior, 36(2). 212-224.</li>
+<li>O&#x27;Leary, N. (2014). Learning informally to use teaching games for understanding: The experience of a recently qualified teacher. European Physical Education Review, 1.18.</li>
+</ol>
+    </div>
+    <a class="backtop" href="#top">↑ 回目錄</a>
+  </div>
+</section>
+
+<section class="doc" id="en4">
+  <div class="wrap">
+    <div class="doc-head">
+      <span class="tf de">🇩🇪 德國 · DFB</span>
+      <h2 class="doc-title">德國足協 2024 兒童足球改革（Funino）</h2>
+      <a class="doc-src" href="http://archive.trainingground.guru/articles/germany-revolutionises-foundation-age-formats" target="_blank">原文出處 ↗</a>
+    </div>
+    <div class="doc-body">
+<h2 class="doc-h2">德國以「樂趣」為核心，徹底改革幼兒足球賽制（Training Ground Guru，2022）——新規定自 2024/25 賽季起強制實施</h2>
+<p>德國推出了新規定，將徹底改變該國 U11（11 歲以下）足球的踢法。</p>
+<p>改革的重點放在「樂趣」與「以球員為中心」的取徑。DFB（德國足球協會）負責兒童與青少年足球事務的副主席羅尼・齊默曼（Ronny Zimmermann）表示：「我們必須用孩子的方式思考，而不是用大人的方式。唯有在比賽中培養出樂趣與喜悅的孩子，才會留在足球裡。」（<em>&quot;We need to think like children, not like adults. Only children who develop fun and joy in the game will stay in football.&quot;</em>）</p>
+<p>這是對我們有時會看到的（包括在英國）那些賽制的一帖解方——在那些賽制裡，孩子在很小的年紀就踢著人數眾多的大場比賽；身體或技術發展較慢的小朋友能碰到球的時間十分有限；而大人（家長、教練與裁判）主導著整場訓練，有時反而對球員造成傷害。</p>
+<p>DFB 新規定的關鍵原則如下：</p>
+<ul>
+<li>小場比賽（small-sided games）。</li>
+<li>較短的比賽時間。</li>
+<li>球員定期輪換，人人都參與。</li>
+<li>沒有裁判，教練與家長的介入降到最低。</li>
+<li>以「比賽午後」（game afternoons）與嘉年華形式取代正式比賽與聯賽。</li>
+<li>幾乎完全取消頂球（heading）。</li>
+</ul>
+<p>這套規定是在為期兩年、涵蓋全部 21 個地區協會的試辦階段之後才推出的；在試辦期間累積了「良好的經驗」，孩子們的回饋也「非常正面」。德國的「足球國會」——DFB Bundestag（DFB 聯邦大會）——已於 3 月 11 日正式批准這套規定。</p>
+<p>DFB 在一份聲明中表示：「玩球與進球，是這麼多兒童與青少年喜歡足球的主要原因。這些新的比賽形式，是為了讓場上每一個孩子都能盡可能常常地把球控在自己腳下、主動參與比賽、進球得分，從而獲得屬於個人的成就感。」（<em>&quot;Playing with the ball and scoring goals are the main reasons why so many children and young people enjoy football... The new forms of play are intended to give all children on the pitch the opportunity as often as possible to have the ball at their feet themselves, to take an active part in the game, to score goals and thus to have a personal sense of achievement.&quot;</em>）</p>
+<p>這些改變深受「Funino」概念的影響——這個字是「fun」（樂趣）與「nino」（西班牙文的「孩子」）兩字的合成——由已故的教練大師霍斯特・韋恩（Horst Wein）所發展出來。</p>
+<h2 class="doc-h2">新賽制——G 級青少年（G-Youth，U6 與 U7）：</h2>
+<ul>
+<li>2 v 2 或 3 v 3。</li>
+<li>場地大小＝16m x 20m，最大不超過 28m x 22m。</li>
+<li>每隊最多兩名替補。</li>
+<li>比賽使用四座迷你球門，因此每隊防守兩座球門。</li>
+<li>進球規定：2 v 2 只能從中線以內射門得分；3 v 3 只能在六公尺的「射門區」（shooting zone）內射門得分。</li>
+<li>沒有守門員。</li>
+<li>每次進球後，兩隊各自動換一名球員上下場。</li>
+<li>在比賽午後，建議進行最多七輪比賽，每輪最長 10 分鐘。每一輪結束後，獲勝的隊伍往前推進一座球場。</li>
+</ul>
+    </div>
+    <a class="backtop" href="#top">↑ 回目錄</a>
+  </div>
+</section>
+
+<section class="doc" id="en5">
+  <div class="wrap">
+    <div class="doc-head">
+      <span class="tf sci">🔬 研究 · Changing the Game</span>
+      <h2 class="doc-title">孩子為什麼放棄運動</h2>
+      <a class="doc-src" href="https://changingthegameproject.com/why-kids-quit-sports/" target="_blank">原文出處 ↗</a>
+    </div>
+    <div class="doc-body">
+<h2 class="doc-h2">孩子為什麼放棄運動（Changing the Game Project）</h2>
+<p><em>2015 年 5 月 6 日｜主題：教練、青少年運動的問題、運動家長</em></p>
+<p>「教練，我真的受不了了，」幾年前，一位有天賦卻表現不如預期的球員凱特（Kate）這樣告訴我，「我想我不想再打了。」</p>
+<p>我腦中把所有可能的原因都跑了一遍：倦怠（burnout）、有了別的興趣、隊伍氣氛、是不是我對她太嚴厲了……種種可能。到底是什麼？</p>
+<p>「是我爸。他愛我，我知道他只是想要對我最好，但他就是沒辦法停止指導我——在車上、每一場比賽的場邊都要指導我。他在的時候我根本沒辦法打球，可是他偏偏堅持每一場比賽都要來、每一趟客場都要跟，什麼都要參一腳。感覺這件事對他來說，比對我還重要。」</p>
+<p>可惜的是，凱特的故事並不罕見。這是一個關於「立意良善的家長」的故事——他們一心只想給孩子最好的。他們愛自己的孩子，只是他們愛的方式，並不總是對孩子有幫助。</p>
+<p>正如我在這裡多次提過的：有 70% 的孩子在滿 13 歲之前就退出了有組織的運動。每次我提到這個令人難過的統計數字，總會有人跳出來說，退出的只不過是那些「打得不夠好」的孩子罷了。他們說，那個年紀本來就是課業、打工和其他興趣開始排在前面的階段。這些說法都對，也的確構成流失率的一部分，但它們並不是全貌。</p>
+<p>可惜的是，在我們當前的青少年運動生態裡，孩子與家庭被要求在越來越小的年紀做越來越多的事——尤其是那些在某項運動上早早展現天分的孩子。這些運動員當中，有許多是我們最投入、最有才華的孩子，他們也一樣會倦怠、一樣會退出。</p>
+<p>我們流失的，不只是那些進不了校隊（varsity）的孩子；我們流失的，還有隊上許多最優秀的運動員。</p>
+<p>如果你是家長或教練，我認為有一件事至關重要：我們要好好理解孩子為什麼打球、又為什麼放棄。同樣關鍵的是，我們要和自己的運動員保持暢通的溝通管道，這樣我們才能及早察覺一些警訊，在為時已晚之前把船導回正軌。</p>
+<p>我認為孩子離開運動主要有五個原因，而這些原因最終都歸結到同一個共同點：它們讓孩子在面對運動時，陷入不好的心理狀態。我希望你能逐一檢視以下這幾種情境，並問問自己：「這是我的孩子嗎？」如果答案是肯定的，那麼——採取行動、做出改變，永遠不嫌晚。</p>
+<h2 class="doc-h2">1. 不再好玩了</h2>
+<p>孩子放棄運動的第一大原因，就是運動不再好玩了。在 2014 年一項為喬治華盛頓大學（George Washington University）所做的研究中，研究者阿曼達・維賽克（Amanda Visek）訪談了眾多青少年運動員，問他們為什麼要運動，結果十個裡有九個都說：他們運動的第一名原因，就是「好玩」！</p>
+<p>喬治華盛頓大學這項研究裡的孩子，把「好玩」定義為：盡自己最大的努力、被教練／家長／隊友尊重地對待，以及有上場時間。他們列出了八十一項構成「好玩」的特徵，而「贏球」（排第 48）、「打錦標賽」（排第 63）和「跟私人教練訓練」（排第 66）在這份清單上都名次不高。</p>
+<p>如果你的年輕運動員玩得不開心，那麼無論他多有天賦、無論他的隊伍或教練有多好，他終究會離開。大人自己也很少會去做那些自己毫無樂趣可言的自願性活動，例如運動或社區服務。那我們憑什麼認為孩子會呢？</p>
+<p><strong>解方：</strong> 你的運動員永遠不會「太老」或「太有天賦」，以致不需要回答「你在場上玩得開心嗎？」這個問題。問就對了！很有可能，他們玩得越開心，就打得越好、打得越多、也越肯下苦功。麥可・喬丹（Michael Jordan）在他的職業籃球合約裡就有一條「熱愛比賽」（love of the game）條款，讓他隨時想打街頭鬥牛都可以，因為他實在太享受打球了。它一定要好玩！而一旦它不再好玩，你就得想辦法讓它重新變得好玩，否則你會發現——他還沒回過神就提早退休了！</p>
+<h2 class="doc-h2">2. 他們失去了對這段經歷的「主導權」</h2>
+<p>我認為，讓運動變得比較不好玩、進而導致孩子轉去追求其他興趣的一個巨大因素，就是失去了對這段經歷的主導權（ownership）。</p>
+<p>就像上面凱特的故事一樣，數以百萬計的孩子離開了運動，去尋找一個「他們的每一個動作、每一個失誤都不會被大人放大檢視」的地方。這並不是說教練或教學沒有存在的空間；而是——好的教練不會把孩子的自主權（autonomy）拿走。如果你對此存疑，那就問問自己：「為什麼一個普通的青少年男孩，一週要打 17 小時的電動？」其中很大一部分原因是：沒有人站在他肩膀後面，對他的每一步指指點點，還要求他來取悅自己。</p>
+<p>如果你發現自己會說「我們三振了 10 個打者」或「我們進了 3 球」，那你就沒有讓孩子擁有這段經歷的主導權。如果你發現自己在場邊對孩子的每一個動作下指導棋，叫他「射門」、「盤球」或「傳球」，而不是讓他自己做決定，那你並沒有在幫忙！你正在把這段經歷的主導權從孩子身上偷走，並在這個過程中把樂趣也一併抽乾。如果你的老闆站在你肩膀後面，對你工作上做的每一件事都評頭論足，這會對你有幫助嗎？不會吧？那我們憑什麼認為，這樣做對我們的年輕運動員有幫助？</p>
+<p>沒有幫助。</p>
+<p><strong>解方：</strong> 接受你孩子「為什麼打球」的目標（點這裡取得我的親子目標設定表，並觀看我談目標設定的影片）。幫他們找到自己的熱情所在，而不是替他們決定熱情該是什麼。當你在看孩子的比賽時，要嘛在一個動作結束後正向地喝采，要嘛就什麼都別說。永遠不要對裁判大吼。如果你不知道該說什麼，那就「問你的孩子」！你或許會對他們的答案感到意外。</p>
+<h2 class="doc-h2">3. 他們沒有上場時間</h2>
+<p>如果孩子在一支隊伍裡，卻從來得不到有意義的上場時間、或一犯錯就被換下場，他們就會放棄！孩子想要打球，孩子需要打球。如果他們永遠上不了場、無法為隊伍做出貢獻，那麼隊伍有多強、教練有多有名，對他們來說幾乎毫無意義。約瑟夫森研究所（Josephson Institute）的一項研究發現：有 90% 的孩子寧願在一支輸球的隊伍裡「上場打球」，也不願在一支贏球的隊伍裡「坐冷板凳」。</p>
+<p>我們在越來越小的年紀就過度強調輸贏，這在小學階段的運動裡創造出一種「全明星」（all-star）文化，不再允許孩子按照自己的步調發展。當教練只把眼光放在輸贏上、只讓那些「今天能幫隊伍贏球」的孩子上場時，他們就把許多——長遠來看原本會成為更好球員的——孩子趕出了運動。如果連大聯盟總教練麥克・馬西尼（Mike Matheny）都能替他帶的青少棒隊在每個守位上找到上場時間，你也一定做得到。</p>
+<p><strong>解方：</strong> 教練們，如果你選了他們，你就得讓他們上場，尤其是在最年幼的年齡層。而家長們，如果你的孩子在隊上，卻明明每一次練習與比賽都到，卻始終得不到有意義的上場時間，那就問問你的孩子他是不是不開心。如果他不開心，那麼等你當初的承諾期滿之後，就替他另找一支隊伍。大學與職業運動的世界裡，滿是「11 歲時並非明星球員」的運動員；他們當中甚至有很多人還待過那個人人避之唯恐不及的「B 隊」。但他們有球可打，結果他們的運動能力得以發展，也逐漸愛上了這項運動。沒有任何一座青少年獎盃，值得用「不打球」去換。</p>
+<h2 class="doc-h2">4. 他們害怕犯錯</h2>
+<p>孩子告訴我們，他們放棄的主要原因之一，就是他們害怕犯錯——因為犯了錯會被批評、被吼、被冰在板凳上，還有更多。偉大的球員，是在「不害怕犯錯」的環境中成長出來的：在那樣的環境裡，他們被鼓勵去嘗試、去失敗，並被教導理解「失敗是發展歷程中必要的一部分」。反之，那些在場邊喋喋不休、對球員的每一個決定與動作都事後諸葛、還對「盡了力卻失敗」的球員大吼的教練與家長，只會創造出一種恐懼的文化，把球員逼離這項運動。</p>
+<p><strong>解方：</strong> 擁抱年輕運動員的失敗與冒險。與其只稱讚一個成功動作的「結果」，不如開始去稱讚孩子在犯錯「之後」的當下所做的事。他們有沒有拼命把球搶回來？他們有沒有繼續嘗試用 1v1 過掉對手？去稱讚他們對失敗的反應，並創造一個「可以安心失敗」的環境。</p>
+<h2 class="doc-h2">5. 他們覺得不被尊重</h2>
+<p>在 2014 年喬治華盛頓大學那項研究中，孩子列出了一位好教練的前五大特質，而「尊重與鼓勵」（Respect and Encouragement）名列第一。我從沒遇過哪個大人，會喜歡被自己的朋友、家人或同事不尊重地對待；然而，去任何一場運動比賽看看，你都會看到無數個孩子只因為傳了一記壞球、或射門沒進，就被不尊重地對待。我看過像《The Short Game》那種荒謬的節目，裡面 7 歲的高爾夫小球員，只因為切球失手，就被自己身兼球童的老爸（caddy-daddy）窮追猛打——而同一記切球，PGA 職業選手在週末也照樣打壞。</p>
+<p>運動真的很難。要成為熟練的選手，得花上數以千計的小時、數以年計的練習；然而我們卻期待 9 歲的足球員每一次都做出正確的決定，期待 11 歲的棒球員永遠不失誤。當他們犯錯時，許多教練與家長對待運動員的方式，是他們絕不會允許老師這樣對待自己孩子、或自己老闆這樣對待自己的。我們也絕不會允許孩子來到我們的運動場合、用我們對待他們的方式來對待我們，對吧？</p>
+<p><strong>解方：</strong> 遵守黃金法則（Golden Rule）：己所欲，施於人（你希望別人怎麼對你，你就怎麼對別人）。在我們這個「把青少年運動當娛樂」的文化裡，去尊重一個孩子踏上運動場所需要的努力、專注與勇氣。單單因為他們願意站上這個舞台，就給他們應得的尊重。用你自己會要求別人對待你的那份尊重，去對待他們。</p>
+<hr>
+<p>今天，在美國、乃至全世界，統計數字都顯示：超過 70% 的孩子在滿 13 歲之前就退出了有組織的運動。在這樣一個「將近三分之一的美國兒童被歸類為過重或肥胖」的時代裡，這是一場悲劇。</p>
+<p>投入青少年運動的大人們，無論是家長、教練或行政人員，都有責任去創造一個服務於「孩子」的需求、價值與優先順序的環境，而不是只服務於大人。有 70% 的孩子正用「退出」來告訴我們：我們辜負了他們。</p>
+<p>但我們可以做出改變。我們可以幫孩子找到很棒的運動環境，把他們留在賽場上。我們做得到——只要我們和孩子好好溝通，問他們想從這段經歷中得到什麼，然後讓這段經歷真正屬於他們。</p>
+<p>我們做得到——只要我們用他們應得的尊重去對待他們，並讓他們透過失敗去學習與成長。</p>
+<p>我們做得到——只要我們讓所有孩子都有一個安心的環境可以玩球。</p>
+<p>七成的失敗率（.700 的打擊率），在職業棒球裡或許能替你賺進數百萬美元；但在青少年運動裡，它並沒有服務到我們的孩子。</p>
+<p>讓我們一起改變這場遊戲吧，而我們所有人都將因此受益！</p>
+<hr>
+<h2 class="doc-h2">資源（Resources）</h2>
+<ul>
+<li>Aspen Institute Project Play Report（阿斯本研究所「Project Play」報告）</li>
+<li>Visek, Amanda J. et al., &quot;Fun Integration Theory: Towards Sustaining Children and Adolescents Sport Participation,&quot; Journal of Physical Activity &amp; Health, 2014.</li>
+</ul>
+    </div>
+    <a class="backtop" href="#top">↑ 回目錄</a>
+  </div>
+</section>
+
+<footer>
+  為 <b>Leon（5 歲）</b> 整理 · <a href="./index.html">回精華指南 →</a>
+</footer>
+</body>
+</html>
