@@ -134,6 +134,47 @@
   .src a:hover{color:var(--amber-deep); border-color:var(--amber-deep)}
   .src .who{color:var(--ink-soft); display:block; font-size:12.5px; margin-top:2px}
 
+  /* ---- WORLD / translated authorities ---- */
+  .authority{
+    background:var(--card); border:1px solid var(--line); border-radius:8px;
+    padding:22px 22px 20px; margin-top:20px; position:relative;
+  }
+  .authority .flag{
+    display:inline-block; font-size:12px; font-weight:800; letter-spacing:.06em;
+    color:#fff; background:var(--ink); padding:4px 12px; border-radius:20px; margin-bottom:12px;
+  }
+  .authority .flag.jp{background:#7A3B2E}
+  .authority .flag.en{background:#2B4A7A}
+  .authority .flag.us{background:#3A6A4A}
+  .authority .flag.de{background:#8A6A1E}
+  .authority .flag.sci{background:#5A3A6A}
+  .authority h3{font-size:19px; font-weight:800; margin-bottom:4px}
+  .authority .org{font-size:12.5px; color:#A89B84; margin-bottom:14px}
+  .authority blockquote{
+    border-left:4px solid var(--amber); padding:4px 0 4px 16px; margin:14px 0;
+    font-size:16px; line-height:1.6; color:var(--ink); font-weight:600;
+  }
+  .authority blockquote .orig{
+    display:block; font-size:12.5px; color:#A89B84; font-weight:400;
+    font-style:italic; margin-top:6px; line-height:1.5;
+  }
+  .authority p{font-size:15px; color:var(--ink-soft); margin-top:10px}
+  .authority ul{list-style:none; margin-top:12px; display:grid; gap:8px}
+  .authority ul li{padding-left:22px; position:relative; font-size:14.5px; color:var(--ink-soft)}
+  .authority ul li::before{content:"▸"; position:absolute; left:0; color:var(--amber-deep); font-weight:800}
+  .authority ul li b{color:var(--ink)}
+
+  .consensus{background:var(--ink); color:var(--paper); border-radius:8px; padding:26px 24px; margin-top:28px; border-top:5px solid var(--amber)}
+  .consensus h3{color:var(--amber); font-size:16px; letter-spacing:.05em; margin-bottom:16px; font-weight:800}
+  .consensus ol{list-style:none; counter-reset:c; display:grid; gap:14px}
+  .consensus li{counter-increment:c; padding-left:42px; position:relative; font-size:15.5px; line-height:1.55}
+  .consensus li::before{
+    content:counter(c); position:absolute; left:0; top:-2px; width:28px; height:28px;
+    background:var(--amber); color:var(--ink); border-radius:6px; font-weight:800;
+    display:flex; align-items:center; justify-content:center; font-size:14px;
+  }
+  .consensus li b{color:#fff}
+
   footer{padding:34px 20px 46px; text-align:center; color:var(--ink-soft); font-size:13px}
   footer b{color:var(--ink)}
 </style>
@@ -145,7 +186,7 @@
   <div class="wrap">
     <div class="kicker">6 歲以下 · 親子足球</div>
     <h1>陪 Leon 踢球<br>不是<em>教</em>，是<em>設局讓他著迷</em></h1>
-    <p class="sub">整理自日本足協（JFA）與日本現役青訓教練的核心觀念。這年紀不練技術、不排隊、不解釋——你只要當那個「最認真跟他玩」的大人。</p>
+    <p class="sub">整理自日本、英格蘭、美國、德國足協的官方觀念與運動科學研究。這年紀不教技術、不排隊、不解釋——你只要當那個「最認真跟他玩」的大人。</p>
   </div>
 </header>
 
@@ -330,12 +371,104 @@
   </div>
 </section>
 
+<section id="world">
+  <div class="wrap">
+    <span class="sec-label">全世界怎麼說 · 翻譯</span>
+    <h2><span class="num">05</span>不只日本——足球強國的官方共識</h2>
+    <p class="lead">日本 JFA 不是特例。我把英格蘭、美國、德國足協的官方論述，以及「為什麼孩子放棄運動」的權威研究翻成中文放在這。看完你會發現：五個來源、四個國家、講的是<b>同一件事</b>。</p>
+
+    <div class="authority">
+      <span class="flag jp">🇯🇵 日本 · JFA</span>
+      <h3>日本足協 U6 手冊</h3>
+      <div class="org">《サッカーをやってみよう！》官方手冊</div>
+      <blockquote>
+        「這本手冊<b>絕不是要提倡足球的早期教育</b>。目標不是培養足球選手，而是培養活力充沛、強韌的孩子。這個時期的大前提，是孩子自己能沉迷其中的『遊戲』。『喜歡！』『好玩！』『還想再玩！』——這種心情比什麼都重要。」
+        <span class="orig">サッカー選手を育てることが目標ではなく、元気でたくましいこどもを育てることが目標です。この時期はこども自身が夢中になれるような「遊び」であることが大前提。</span>
+      </blockquote>
+      <p>JFA 甚至點名時代病灶：現代孩子少了「鬼抓人、爬樹」這種戶外遊戲，也少了不同年齡混在一起、靠喜悅與失敗自己長大的團體遊戲——「以前大人是沒有出場機會的」。他們要把那個空間還給孩子。</p>
+    </div>
+
+    <div class="authority">
+      <span class="flag en">🏴 英格蘭 · The FA</span>
+      <h3>英足總 England DNA · 基礎期（Foundation Phase）</h3>
+      <div class="org">針對 5–11 歲的官方教練指引</div>
+      <blockquote>
+        「身為基礎期的教練，你的課就是一個球員在足球裡的『第一步』。做對了，你會幫他長出對『身體活動的熱愛』——以及一生受用的能力。」
+        <span class="orig">your sessions are a player's 'first steps' in football … help your team to develop a love of physical activity plus skills useful in all areas of life.</span>
+      </blockquote>
+      <blockquote>
+        「球員只年輕這麼一次，所以我們有責任把這件事做對。沒有任何時機，比孩子的幼年更適合去影響他對運動與學習的態度。」
+        <span class="orig">Players are only young once, so we owe it to them to get this right. — Pete Sturgess, FA 基礎期總監</span>
+      </blockquote>
+      <p>英足總用「四角模型」（社交、心理、身體、技術戰術）提醒教練別只盯技術；而基礎期唯一的「game aim」就是——<b>創造一個正向、好玩的足球經驗</b>。</p>
+    </div>
+
+    <div class="authority">
+      <span class="flag us">🇺🇸 美國 · US Soccer</span>
+      <h3>美足總 Play–Practice–Play（玩–練–玩）</h3>
+      <div class="org">基礎教練證照的官方訓練模型，實證取向</div>
+      <blockquote>
+        「孩子來到練習場時，<b>幾乎沒有意願去排隊、跑圈、做操、或聽訓話</b>——他們只想玩得開心、跟隊友連結，並透過投入而愉快的活動來學習。」
+        <span class="orig">When children arrive at practice they have little desire to stand in lines, run laps, perform drills, or be lectured, they simply want to have fun, connect with their teammates, and learn through engaging and enjoyable activities.</span>
+      </blockquote>
+      <p>所以他們的每堂課拆成三段：</p>
+      <ul>
+        <li><b>Play（玩）</b>：一到就直接玩小型比賽（2v2、3v3、4v4），在遊戲裡自然帶出今天的主題。</li>
+        <li><b>Practice（練）</b>：只從遊戲裡抽出一個點，用「像遊戲的活動」加強，仍然好玩、人人有份、大量重複。</li>
+        <li><b>Play（再玩）</b>：回到比賽，讓他把剛剛學到的東西用出來。</li>
+      </ul>
+      <p>核心信念寫在哲學第一句：孩子是<b>「透過像遊戲的體驗、在愉快的環境裡」</b>發展到最大潛能。並強調球員學的是「自己喜歡的（內在動機）」和「自己需要的（訓練跟比賽之間沒有落差）」。</p>
+    </div>
+
+    <div class="authority">
+      <span class="flag de">🇩🇪 德國 · DFB</span>
+      <h3>德國足協 2024 兒童足球改革</h3>
+      <div class="org">強制施行的新賽制，靈感來自 Funino（fun + niño）</div>
+      <blockquote>
+        「我們必須<b>像孩子一樣思考，而不是像大人</b>。只有那些對比賽產生樂趣與喜悅的孩子，才會留在足球裡。」
+        <span class="orig">We need to think like children, not like adults. Only children who develop fun and joy in the game will stay in football. — Ronny Zimmermann, DFB 副主席</span>
+      </blockquote>
+      <p>德國把 U6/U7 的比賽整個改掉，就為了讓每個孩子「儘可能常常把球踩在自己腳下、實際參與、進球、得到個人的成就感」：</p>
+      <ul>
+        <li><b>2v2 或 3v3</b>、小場地、沒有守門員。</li>
+        <li>短時間、頻繁輪換，<b>每個人都有份</b>。</li>
+        <li><b>沒有裁判</b>，教練與家長的介入降到最低。</li>
+        <li>用「足球下午」和嘉年華取代正式聯賽。</li>
+      </ul>
+      <p>背後那句話最關鍵：<b>「玩球和進球，就是這麼多孩子熱愛足球的主要原因。」</b>大場地讓不夠強壯的孩子幾乎碰不到球——那正是他們要消滅的。</p>
+    </div>
+
+    <div class="authority">
+      <span class="flag sci">🔬 研究 · Changing the Game</span>
+      <h3>孩子為什麼放棄運動</h3>
+      <div class="org">引用 George Washington 大學 Amanda Visek 研究</div>
+      <blockquote>
+        「孩子退出的<b>第一名理由</b>，就是運動不再好玩了。研究訪問大量青少年球員『你為什麼運動』，<b>10 個裡有 9 個</b>回答：因為好玩。」
+        <span class="orig">The #1 reason kids quit is because sports is no longer fun … 9 out of 10 said the #1 reason they played was it was fun.</span>
+      </blockquote>
+      <p>更值得記的是：這研究讓孩子列出 81 項「什麼叫好玩」。孩子定義的好玩是——<b>盡了全力、被教練隊友尊重、有上場時間</b>。而「贏球」排第 48、「打錦標賽」第 63、「請私人教練」第 66，全都墊底。</p>
+      <p>殘酷的事實：全美有 70% 的孩子在 13 歲前退出有組織的運動，而且退出的<b>不只是不夠好的孩子，連最有天賦的都在燒完後離開</b>。而燒掉他們的，往往是好意過頭、停不下來指導的大人。</p>
+    </div>
+
+    <div class="consensus">
+      <h3>五個來源的共識 · 你只要記這幾條</h3>
+      <ol>
+        <li><b>目標不是選手，是「愛上運動的孩子」。</b>技術是副產品，熱情才是主產品——熱情在，技術以後自己會追上。</li>
+        <li><b>好玩是第一名，而且是唯一的第一名。</b>孩子定義的好玩＝盡力、被尊重、一直有球踩、有上場。贏球排在最後。</li>
+        <li><b>把球還給孩子的腳下。</b>德國拆成 2v2、美國用小場比賽、日本一人一球——全是為了「碰球次數」和「個人成就感」。</li>
+        <li><b>大人退到後面。</b>不當裁判、少講解、別在場邊一直教。你最有價值的角色是「最認真的玩伴」，不是教練。</li>
+        <li><b>玩–練–玩的節奏。</b>從比賽開始，中間抽一個點加強，再回到比賽。永遠不要用排隊、跑圈、聽訓話開場。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
 <section id="src">
   <div class="wrap">
     <span class="sec-label">資料來源</span>
-    <h2><span class="num">05</span>這份指南的出處</h2>
+    <h2><span class="num">06</span>這份指南的出處</h2>
     <div class="src">
-      <h3>核心觀念與遊戲，統整自以下日本青訓資料：</h3>
+      <h3>日本青訓（核心觀念與遊戲）：</h3>
       <ul>
         <li>
           <a href="https://www.jfa.jp/youth_development/players_first/pdf/u6.pdf" target="_blank">JFA 日本足協 · U6 手冊「サッカーをやってみよう！」</a>
@@ -352,6 +485,27 @@
         <li>
           <a href="https://frontista84.com/age4-5-soccer-training/" target="_blank">frontista84 · 4–5 歲幼兒足球練習菜單「運ぶドリブル」</a>
           <span class="who">實作要點：短菜單組合、以運球為主軸、一定要有帶球射門收尾、4 號球選擇。</span>
+        </li>
+      </ul>
+    </div>
+    <div class="src" style="margin-top:14px">
+      <h3>國際權威（第 05 段翻譯來源）：</h3>
+      <ul>
+        <li>
+          <a href="https://www.thefa.com/learning/england-dna-foundation-phase" target="_blank">The FA · England DNA Foundation Phase</a>
+          <span class="who">英足總 5–11 歲基礎期官方指引：目標是培養對運動的終身熱愛。</span>
+        </li>
+        <li>
+          <a href="https://learndeep.org/wp-content/uploads/Play_Practice_Play.pdf" target="_blank">US Soccer · Play-Practice-Play Model (PDF)</a>
+          <span class="who">美足總實證取向訓練模型：玩–練–玩三段式，孩子不想排隊跑圈。</span>
+        </li>
+        <li>
+          <a href="http://archive.trainingground.guru/articles/germany-revolutionises-foundation-age-formats" target="_blank">DFB · 德國兒童足球改革（Funino / 2v2）</a>
+          <span class="who">「像孩子一樣思考」；小場、無裁判、把球還給每個孩子的腳下。</span>
+        </li>
+        <li>
+          <a href="https://changingthegameproject.com/why-kids-quit-sports/" target="_blank">Changing the Game · 孩子為什麼放棄運動</a>
+          <span class="who">引 George Washington 研究：好玩是第一名，10 個有 9 個為此而玩，贏球墊底。</span>
         </li>
       </ul>
     </div>
